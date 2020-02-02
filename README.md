@@ -18,4 +18,4 @@ To use the onshape scripts you will need to create your credentials. You also wi
 
 https://github.com/onshape-public/apikey/tree/master/python
 
-To use the image similarity scripts in the static mixer, you need to install paraview in headless mode (for usingg pvbatch).
+To use the image similarity scripts in the static mixer, you need to install paraview in headless mode (for using pvbatch).
