@@ -1,0 +1,76 @@
+'''
+Evaluate feature script
+===
+
+You should give the following information:
+
+	- did (str): Document ID
+	- wid (str): Workspace ID
+	- eid (str): Element ID
+	- body_feature: dict with the body of the feature to update
+
+'''
+
+
+from apikey.client import Client
+
+# stacks to choose from
+stacks = {
+    'cad': 'https://cad.onshape.com'
+}
+
+# create instance of the onshape client; change key to test on another stack
+c = Client(stack=stacks['cad'], logging=True)
+
+
+
+# get features for doc
+#did = raw_input('Enter document ID: ')
+#wid = raw_input('Enter workspace ID: ')
+#eid = raw_input('Enter element ID: ')
+
+did = '448249f25f37397d1823feb6'
+wid = '33bca1cf858efd73dc35ab4f'
+eid = '2ec99afd57f87dd94045affd'
+
+
+
+#In body_feature you can add the featureScript to evaluate
+#In this case is evaluating the information saved in the Part Studio variable "#face_area"
+#
+#The custom featureScript "Measure value" was used to compute the volume of the part
+#More custo featureScript in https://www.onshape.com/features/custom-features
+#
+#The info evaluated by the custom featureSript is saved in the Part Studio variable "#nameOfVariable".
+#Then, you can simply retrieve that variable as follows
+
+body_feature = 	{  
+  		"script" : 
+  		"function(context, queries) {return getVariable(context, 'total_surf');}"
+		}
+
+configuration = {
+'units': 'meter',
+'scale': 1.0,
+'configuration' : 
+#	'height=0.07675+m;'
+#	'dia1=0.07674+m;'
+#	'dia2=0.07674+m'
+
+	'height={[height_to_update]}+m;'
+	'dia1={[dia1_to_update]}+m;'
+	'dia2={[dia1_to_update]}+m'
+}
+
+
+#Evaluate featurescript
+#out = c.featurescript(did, wid, eid, body_feature)
+
+#Evaluate featurescript with configuration
+out = c.featurescript_conf(did, wid, eid, body_feature, configuration)
+
+
+#Write the feature output in the file feature.json
+file = open('total_surface.json', 'w')
+file.write(out.text)
+file.close()

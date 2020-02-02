@@ -1,0 +1,80 @@
+# Usage:
+#   dakota -i xxx.in -o run.out > stdout.out
+
+
+
+################################################################################
+environment
+    	#graphics
+    	tabular_data
+        tabular_data_file = 'table_out.dat'
+    	custom_annotated header eval_id	#No interface column
+################################################################################
+    
+
+
+################################################################################    
+method
+  	multidim_parameter_study
+    	#partitions = 10 10
+    	partitions = 20 20
+
+################################################################################
+
+
+
+################################################################################    
+model
+  	single
+################################################################################
+
+
+
+################################################################################  
+variables
+ 	continuous_design = 2
+    	#initial_point    	 0.04	0.08
+    	#upper_bounds      	 0.5    0.2
+    	#lower_bounds        	 0.01  	0.01
+    	upper_bounds      	 0.2    0.2
+    	lower_bounds        	 0.02  	0.02
+    	descriptors       	'height_to_update'   'dia1_to_update'
+################################################################################	  
+	  
+
+
+################################################################################
+interface
+	fork
+	asynchronous
+	evaluation_concurrency = 4
+	#evaluation_concurrency = 1
+
+        analysis_concurrency = 1
+
+	analysis_driver = 'simulator_script'
+	parameters_file = 'params.in'
+	results_file    = 'results.out'
+	work_directory directory_tag
+
+        copy_files = 'templatedir/*'
+	  
+
+# uncomment to leave params.in and results.out files in work_dir subdirectories
+	named 'workdir' file_save  directory_save
+	aprepro
+	  
+## when using conmin_frcg (above) with analytic_gradients (below), 
+## need to turn off the active set vector as rosenbrock_bb does not parse it.
+ 	deactivate active_set_vector
+################################################################################
+
+
+	
+################################################################################	
+responses
+	num_objective_functions = 2
+  	no_gradients
+ 	no_hessians
+################################################################################
+

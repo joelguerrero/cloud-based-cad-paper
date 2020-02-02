@@ -1,0 +1,14 @@
+# Read in data
+#Load[name = sbo, file = 'input_qoi.spd', n_predictors = 2,n_responses = 1]
+Load[name = sbo, file = 'input_nlc.spd', n_predictors = 2,n_responses = 1]
+
+CreateAxes[name = ax_2d, bounds = '0.02 0.2 | 0.02 0.2 ']
+CreateSample[name = test_data, axes = ax_2d, grid_points = (100,100),labels = (x1,x2)]
+
+CreateSurface[name = kriging_sbo_local, data = sbo, type = kriging, lower_bounds = (0.02, 0.02), upper_bounds = (0.2, 0.2), optimization_method = local ]
+
+Evaluate[surface = kriging_sbo_local, data = test_data, label = kriging]
+ 
+#Save[data = test_data, file = 'output_qoi.spd']
+Save[data = test_data, file = 'output_nlc.spd']
+

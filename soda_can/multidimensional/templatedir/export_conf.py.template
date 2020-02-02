@@ -1,0 +1,65 @@
+'''
+exportstl
+===
+
+You should give the following information:
+
+	- did (str): Document ID
+	- wid (str): Workspace ID
+	- eid (str): Element ID
+
+'''
+
+from apikey.client import Client
+
+# stacks to choose from
+stacks = {
+    'cad': 'https://cad.onshape.com'
+}
+
+# create instance of the onshape client; change key to test on another stack
+c = Client(stack=stacks['cad'], logging=True)
+
+
+
+# get features for doc
+#did = raw_input('Enter document ID: ')
+#wid = raw_input('Enter workspace ID: ')
+#eid = raw_input('Enter element ID: ')
+
+did = '448249f25f37397d1823feb6'
+wid = '33bca1cf858efd73dc35ab4f'
+eid = '2ec99afd57f87dd94045affd'
+
+
+configuration = {
+'units': 'meter',
+'scale': 1.0,
+'configuration' : 
+#	'height=0.07675+m;'
+#	'dia1=0.07674+m;'
+#	'dia2=0.07674+m'
+
+	'height={[height_to_update]}+m;'
+	'dia1={[dia1_to_update]}+m;'
+	'dia2={[dia1_to_update]}+m'
+}
+
+# get the STL export
+stl = c.part_studio_stl_conf(did, wid, eid, configuration)
+
+
+
+# print to the console some info - optional
+print(" ")
+print("End of request for STL output using configurations")
+print("***************************************************************")
+#print stl.text
+
+
+
+#Write the STL output in the file test.stl
+file = open('geo.stl', 'w')
+file.write(stl.text)
+file.close()
+
