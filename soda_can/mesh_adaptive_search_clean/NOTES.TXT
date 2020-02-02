@@ -1,0 +1,15 @@
+If you are using inline braces {} in your template scripts, DAKOTA will try to do inline replacement
+replacement in those locations, and sometimes this can give you problems.
+
+For example, line 49 of joe1_evaluate_featurescript.py.template you will find
+
+	"function(context, queries) {return getVariable(context, 'total_surf');}
+
+because of the inline braces, which is the default symbol for inline replacement, DAKOTA will fail 
+in doing the substitution.
+
+To avoid this problem you can move the braces to another line (if it is accepted by the script).
+
+Or you can use a different inline replacement delimiter, as follows,
+
+	dprepro --left-delimiter='[[' --right-delimiter=']]'

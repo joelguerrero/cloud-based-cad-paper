@@ -1,0 +1,133 @@
+# Usage:
+#   dakota -i xxx.in -o run.out > stdout.out
+
+
+
+################################################################################
+environment
+    	tabular_data
+        tabular_data_file = 'table_out.dat'
+    	custom_annotated header eval_id	#No interface column
+################################################################################
+    
+
+
+################################################################################    
+method
+
+#Derivative free local methods
+#no need of starting point
+#It is taken the default values
+
+		mesh_adaptive_search	#Pattern search NOMAD
+
+	       max_function_evaluations = 10000	#1000
+	       max_iterations = 1000	#100
+	       #convergence_tolerance 0.00001
+
+################################################################################
+
+
+
+################################################################################    
+model
+  	single
+################################################################################
+
+
+
+################################################################################  
+variables
+
+ 	#continuous_design = 3
+    	#initial_point    	 0.1	0.05	0.05
+    	#initial_point    	 0.04	0.08	0.05
+    	#upper_bounds      	 0.5   	0.2	0.2
+    	#lower_bounds        	 0.01  	0.01	0.01
+    	#descriptors       	'height_to_update'   'dia1_to_update'	'dia2_to_update'
+
+ 	continuous_design = 2
+
+	#Starting 0
+    	#initial_point    	 0.02	0.12
+
+	#Starting 1 - def
+    	#initial_point    	 0.04	0.08
+
+	#starting 2
+    	#initial_point    	 0.05	0.05
+
+	#starting 3
+    	#initial_point    	 0.2	0.2
+
+    	upper_bounds      	 0.5    0.2
+    	lower_bounds        	 0.02  	0.02
+    	descriptors       	'height_to_update'   'dia1_to_update'
+
+        #scale_types = 'value' 'value'
+        #scales = 100 100
+################################################################################	  
+	  
+
+
+################################################################################
+interface
+	fork
+	asynchronous
+	evaluation_concurrency = 6
+	#evaluation_concurrency = 1
+
+        analysis_concurrency = 1
+
+	analysis_driver = 'simulator_script'
+	parameters_file = 'params.in'
+	results_file    = 'results.out'
+	work_directory directory_tag
+
+        copy_files = 'templatedir/*'
+	  
+
+# uncomment to leave params.in and results.out files in work_dir subdirectories
+	named 'workdir' file_save  directory_save
+	aprepro
+	  
+## when using conmin_frcg (above) with analytic_gradients (below), 
+## need to turn off the active set vector as rosenbrock_bb does not parse it.
+ 	deactivate active_set_vector
+################################################################################
+
+
+	
+################################################################################	
+responses
+	num_objective_functions = 1
+
+  	#nonlinear_equality_constraints = 1
+	#nonlinear_equality_targets = 0.000355
+
+  	#nonlinear_inequality_constraints = 1
+	#upper_bounds = 0.000356
+	#lower_bounds = 0.000354
+
+        #primary_scale_types = "value"
+        #primary_scales = 1000000
+
+        #nonlinear_equality_scale_types = "value"
+        #nonlinear_equality_scales = 1000000
+
+
+  	#nonlinear_equality_constraints = 1
+	#nonlinear_equality_targets = 355
+
+  	nonlinear_inequality_constraints = 1
+	upper_bounds = 356
+	lower_bounds = 354
+
+
+  	no_gradients
+ 	no_hessians
+
+	sense 'min' 
+
+################################################################################
+
