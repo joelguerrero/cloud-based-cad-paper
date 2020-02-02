@@ -1,0 +1,2600 @@
+1
+
+
+
+            * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+            *                                                   *
+            *                    C O N M I N                    *
+            *                                                   *
+            *                FORTRAN PROGRAM FOR                *
+            *                                                   *
+            *         CONSTRAINED FUNCTION MINIMIZATION         *
+            *                                                   *
+            * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.1
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     CONSTRAINED FUNCTION MINIMIZATION
+
+     CONTROL PARAMETERS
+
+     IPRINT  NDV    ITMAX    NCON    NSIDE  ICNDIR   NSCAL   NFDG
+       2       2    1000       2       1       3       0       1
+
+     LINOBJ  ITRM     N1      N2      N3      N4      N5
+       0       3       4       6       5       5      10
+
+         CT              CTMIN           CTL             CTLMIN
+     -0.10000E+00     0.10000E-02    -0.10000E-01     0.10000E-02
+
+         THETA           PHI             DELFUN          DABFUN
+      0.10000E+01     0.50000E+01     0.10000E-03     0.10000E-03
+
+         FDCH            FDCHM           ALPHAX          ABOBJ1
+      0.10000E-04     0.10000E-04     0.10000E+00     0.10000E+00
+
+     LOWER BOUNDS ON DECISION VARIABLES (VLB)
+       1)    0.10000E-01  0.10000E-01
+
+     UPPER BOUNDS ON DECISION VARIABLES (VUB)
+       1)    0.50000E+00  0.20000E+00
+
+     ALL CONSTRAINTS ARE NON-LINEAR
+
+
+     INITIAL FUNCTION INFORMATION
+
+     OBJ =   0.301593E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.20000E-01  0.12000E+00
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)    0.12781E+03 -0.12981E+03
+ 
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.3
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.2
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.4
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.5
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.6
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =    1     OBJ =   0.35287E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.29776E-01  0.12303E+00
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)    0.73070E-05 -0.20000E+01
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.7
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.8
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.9
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.10
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.11
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =    2     OBJ =   0.35287E+03     NO CHANGE IN OBJ
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.29776E-01  0.12303E+00
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)    0.73070E-05 -0.20000E+01
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.12
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.13
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.14
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =    3     OBJ =   0.35287E+03     NO CHANGE IN OBJ
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.29776E-01  0.12303E+00
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)    0.73070E-05 -0.20000E+01
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.16
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.15
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.17
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.18
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.19
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.20
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =    4     OBJ =   0.35198E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.30183E-01  0.12252E+00
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)   -0.18636E+01 -0.13635E+00
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.21
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.22
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.23
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.24
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.25
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =    5     OBJ =   0.35102E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.30085E-01  0.12240E+00
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)   -0.14200E-06 -0.20000E+01
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.27
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.26
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.28
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.29
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.30
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =    6     OBJ =   0.35006E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.30533E-01  0.12184E+00
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)   -0.20000E+01  0.71000E-07
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.32
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.31
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.33
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.34
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.35
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =    7     OBJ =   0.34912E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.30411E-01  0.12174E+00
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)    0.40873E-04 -0.20000E+01
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.36
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.37
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.38
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.39
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.40
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =    8     OBJ =   0.34818E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.30867E-01  0.12118E+00
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)   -0.20001E+01  0.89714E-04
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.41
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.42
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.43
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.44
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.45
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =    9     OBJ =   0.34727E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.30738E-01  0.12109E+00
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)    0.75184E-04 -0.20001E+01
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.46
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.47
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.48
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.49
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.50
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   10     OBJ =   0.34633E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.31203E-01  0.12053E+00
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)   -0.20000E+01  0.28400E-06
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.51
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.52
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.53
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.54
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.55
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   11     OBJ =   0.34538E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.31080E-01  0.12043E+00
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)   -0.15500E-06 -0.20000E+01
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.57
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.56
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.58
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.59
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.60
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   12     OBJ =   0.34441E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.31562E-01  0.11984E+00
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)   -0.20000E+01  0.38500E-06
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.62
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.61
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.63
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.64
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.65
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   13     OBJ =   0.34346E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.31439E-01  0.11974E+00
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)    0.86610E-05 -0.20000E+01
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.66
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.67
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.68
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.69
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.70
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   14     OBJ =   0.34249E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.31933E-01  0.11914E+00
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)   -0.20000E+01 -0.24100E-06
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.72
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.71
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.73
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.74
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.75
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   15     OBJ =   0.34153E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.31809E-01  0.11904E+00
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)    0.36930E-05 -0.20000E+01
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.76
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.77
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.78
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.79
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.80
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   16     OBJ =   0.34055E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.32318E-01  0.11843E+00
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)   -0.20000E+01 -0.18700E-06
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.81
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.82
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.83
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.84
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.85
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   17     OBJ =   0.33959E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.32194E-01  0.11832E+00
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)    0.83670E-05 -0.20000E+01
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.87
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.86
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.88
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.89
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.90
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   18     OBJ =   0.33861E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.32717E-01  0.11771E+00
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)   -0.20000E+01 -0.29300E-06
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.91
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.92
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.93
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.94
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.95
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   19     OBJ =   0.33764E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.32592E-01  0.11760E+00
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)    0.70390E-05 -0.20000E+01
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.96
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.97
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.98
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.99
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.100
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   20     OBJ =   0.33665E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.33130E-01  0.11697E+00
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)   -0.20000E+01  0.24900E-06
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.101
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.102
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.103
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.104
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.105
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   21     OBJ =   0.33568E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.33005E-01  0.11686E+00
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)    0.10279E-04 -0.20000E+01
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.106
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.107
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.108
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.109
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.110
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   22     OBJ =   0.33469E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.33560E-01  0.11622E+00
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)   -0.20000E+01 -0.43000E-07
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.111
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.112
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.113
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.114
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.115
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   23     OBJ =   0.33372E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.33434E-01  0.11611E+00
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)    0.94400E-05 -0.20000E+01
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.117
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.116
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.118
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.119
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.120
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   24     OBJ =   0.33271E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.34006E-01  0.11545E+00
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)   -0.20000E+01 -0.20400E-06
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.122
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.121
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.123
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.124
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.125
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   25     OBJ =   0.33174E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.33880E-01  0.11534E+00
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)    0.11468E-04 -0.20000E+01
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.126
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.127
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.128
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.129
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.130
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   26     OBJ =   0.33073E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.34471E-01  0.11467E+00
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)   -0.20000E+01  0.13400E-06
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.131
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.132
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.133
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.134
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.135
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   27     OBJ =   0.32975E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.34345E-01  0.11456E+00
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)    0.13681E-04 -0.20000E+01
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.137
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.136
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.138
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.139
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.140
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   28     OBJ =   0.32874E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.34955E-01  0.11387E+00
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)   -0.20000E+01  0.15400E-06
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.142
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.141
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.143
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.144
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.145
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   29     OBJ =   0.32775E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.34829E-01  0.11376E+00
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)    0.13782E-04 -0.20000E+01
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.146
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.147
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.148
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.149
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.150
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   30     OBJ =   0.32674E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.35461E-01  0.11306E+00
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)   -0.20000E+01 -0.91000E-07
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.151
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.152
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.153
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.154
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.155
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   31     OBJ =   0.32575E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.35334E-01  0.11294E+00
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)    0.16257E-04 -0.20000E+01
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.157
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.156
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.158
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.159
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.160
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   32     OBJ =   0.32472E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.35989E-01  0.11223E+00
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)   -0.20000E+01 -0.29500E-06
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.162
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.161
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.163
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.164
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.165
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   33     OBJ =   0.32373E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.35862E-01  0.11211E+00
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)    0.17359E-04 -0.20000E+01
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.166
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.167
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.168
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.169
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.170
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   34     OBJ =   0.32270E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.36542E-01  0.11137E+00
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)   -0.20000E+01 -0.15000E-06
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.172
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.171
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.173
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.174
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.175
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   35     OBJ =   0.32170E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.36415E-01  0.11125E+00
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)    0.20860E-04 -0.20000E+01
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.177
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.176
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.178
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.179
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.180
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   36     OBJ =   0.32067E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.37122E-01  0.11050E+00
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)   -0.20000E+01 -0.25700E-06
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.182
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.181
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.183
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.184
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.185
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   37     OBJ =   0.31966E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.36995E-01  0.11038E+00
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)    0.22399E-04 -0.20000E+01
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.186
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.187
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.188
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.189
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.190
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   38     OBJ =   0.31862E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.37732E-01  0.10960E+00
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)   -0.20000E+01 -0.19300E-06
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.191
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.192
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.193
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.194
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.195
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   39     OBJ =   0.31761E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.37605E-01  0.10948E+00
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)    0.26197E-04 -0.20000E+01
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.196
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.197
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.198
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.199
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.200
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   40     OBJ =   0.31657E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.38374E-01  0.10868E+00
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)   -0.20000E+01 -0.12000E-06
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.201
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.202
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.203
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.204
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.205
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   41     OBJ =   0.31555E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.38246E-01  0.10856E+00
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)    0.28797E-04 -0.20000E+01
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.206
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.207
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.208
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.209
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.210
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   42     OBJ =   0.31450E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.39051E-01  0.10774E+00
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)   -0.20000E+01 -0.69000E-07
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.211
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.212
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.213
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.214
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.215
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   43     OBJ =   0.31348E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.38923E-01  0.10761E+00
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)    0.33295E-04 -0.20000E+01
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.216
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.217
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.218
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.219
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.220
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   44     OBJ =   0.31242E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.39768E-01  0.10676E+00
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)   -0.20000E+01  0.48000E-07
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.222
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.221
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.223
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.224
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.225
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   45     OBJ =   0.31140E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.39640E-01  0.10663E+00
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)    0.36728E-04 -0.20000E+01
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.227
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.226
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.228
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.229
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.230
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   46     OBJ =   0.31033E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.40528E-01  0.10576E+00
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)   -0.20000E+01 -0.17500E-06
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.232
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.231
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.233
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.234
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.235
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   47     OBJ =   0.30930E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.40401E-01  0.10562E+00
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)    0.42219E-04 -0.20000E+01
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.237
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.236
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.238
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.239
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.240
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   48     OBJ =   0.30823E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.41338E-01  0.10471E+00
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)   -0.20000E+01  0.54300E-06
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.242
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.241
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.243
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.244
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.245
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   49     OBJ =   0.30720E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.41210E-01  0.10458E+00
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)    0.48831E-04 -0.20000E+01
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.247
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.246
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.248
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.249
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.250
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   50     OBJ =   0.30611E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.42203E-01  0.10364E+00
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)   -0.20000E+01 -0.28100E-06
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.252
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.251
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.253
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.254
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.255
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   51     OBJ =   0.30508E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.42076E-01  0.10350E+00
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)    0.53395E-04 -0.20001E+01
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.256
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.257
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.258
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.259
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.260
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   52     OBJ =   0.30398E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.43131E-01  0.10251E+00
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)   -0.20000E+01 -0.51000E-06
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.261
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.262
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.263
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.264
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.265
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   53     OBJ =   0.30295E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.43005E-01  0.10238E+00
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)    0.64221E-04 -0.20001E+01
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.266
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.267
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.268
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.269
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.270
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   54     OBJ =   0.30184E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.44133E-01  0.10134E+00
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)   -0.20000E+01  0.43100E-06
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.271
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.272
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.273
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.274
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.275
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   55     OBJ =   0.30080E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.44006E-01  0.10120E+00
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)    0.73597E-04 -0.20001E+01
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.276
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.277
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.278
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.279
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.280
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   56     OBJ =   0.29969E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.45219E-01  0.10012E+00
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)   -0.20000E+01 -0.37800E-06
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.282
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.281
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.283
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.284
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.285
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   57     OBJ =   0.29864E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.45094E-01  0.99977E-01
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)    0.84882E-04 -0.20001E+01
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.286
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.287
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.288
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.289
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.290
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   58     OBJ =   0.29751E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.46407E-01  0.98830E-01
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)   -0.20000E+01  0.85000E-07
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.291
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.292
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.293
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.294
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.295
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   59     OBJ =   0.29646E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.46282E-01  0.98685E-01
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)    0.10284E-03 -0.20001E+01
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.296
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.297
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.298
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.299
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.300
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   60     OBJ =   0.29532E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.47716E-01  0.97465E-01
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)   -0.20000E+01  0.39000E-07
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.301
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.302
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.303
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.304
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.305
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   61     OBJ =   0.29427E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.47593E-01  0.97317E-01
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)    0.12081E-03 -0.20001E+01
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.306
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.307
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.308
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.309
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.310
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   62     OBJ =   0.29311E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.49178E-01  0.96005E-01
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)   -0.20000E+01  0.20800E-06
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.312
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.311
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.313
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.314
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.315
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   63     OBJ =   0.29205E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.49056E-01  0.95854E-01
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)    0.15048E-03 -0.20002E+01
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.317
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.316
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.318
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.319
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.320
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   64     OBJ =   0.29087E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.50834E-01  0.94429E-01
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)   -0.20000E+01  0.40700E-06
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.322
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.321
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.323
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.324
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.325
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   65     OBJ =   0.28981E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.50714E-01  0.94275E-01
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)    0.18687E-03 -0.20002E+01
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.326
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.327
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.328
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.329
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.330
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   66     OBJ =   0.28859E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.52756E-01  0.92692E-01
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)   -0.20000E+01  0.10950E-05
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.331
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.332
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.333
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.334
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.335
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   67     OBJ =   0.28753E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.52638E-01  0.92535E-01
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)    0.24834E-03 -0.20002E+01
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.337
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.336
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.338
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.339
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.340
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   68     OBJ =   0.28625E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.55069E-01  0.90725E-01
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)   -0.20000E+01  0.35600E-05
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.341
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.342
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.343
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.344
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.345
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   69     OBJ =   0.28519E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.54952E-01  0.90566E-01
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)    0.34903E-03 -0.20003E+01
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.346
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.347
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.348
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.349
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.350
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   70     OBJ =   0.28379E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.58071E-01  0.88349E-01
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)   -0.20000E+01  0.29505E-04
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.351
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.352
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.353
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.354
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.355
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   71     OBJ =   0.28273E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.57951E-01  0.88191E-01
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)    0.58733E-03 -0.20006E+01
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.356
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.357
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.358
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.359
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.360
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   72     OBJ =   0.28063E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.63465E-01  0.84498E-01
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)   -0.18930E+01 -0.10702E+00
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.362
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.361
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.363
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.364
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.365
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   73     OBJ =   0.27962E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.63372E-01  0.84335E-01
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)    0.13000E-07 -0.20000E+01
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.366
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.367
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.368
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.369
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.370
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   74     OBJ =   0.27768E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.69847E-01  0.80340E-01
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)   -0.82859E-01 -0.19171E+01
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.371
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.372
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.373
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.374
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.375
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   75     OBJ =   0.27764E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.69843E-01  0.80333E-01
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)    0.20587E-03 -0.20002E+01
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.376
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.377
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.378
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.379
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.380
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   76     OBJ =   0.27719E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.73211E-01  0.78468E-01
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)   -0.40644E-01 -0.19594E+01
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.381
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.382
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.383
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.384
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.385
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   77     OBJ =   0.27717E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.73209E-01  0.78465E-01
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)    0.15628E-04 -0.20000E+01
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.386
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.387
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.388
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.389
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.390
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   78     OBJ =   0.27706E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.74935E-01  0.77557E-01
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)   -0.40855E-02 -0.19959E+01
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.391
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.392
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.393
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.394
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.395
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   79     OBJ =   0.27705E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.75265E-01  0.77386E-01
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)   -0.96240E-04 -0.19999E+01
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.396
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.397
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.398
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.399
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.400
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   80     OBJ =   0.27703E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.75911E-01  0.77056E-01
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)   -0.86887E-03 -0.19991E+01
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.402
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.401
+ 
+End of request for STL output using configurations
+***************************************************************
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.403
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.404
+ 
+End of request for STL output using configurations
+***************************************************************
+/home/joegi/optimization/onshape_API/API_python2/test_cases/soda_can_DAKOTA/gradient/workdir.405
+ 
+End of request for STL output using configurations
+***************************************************************
+
+
+
+
+     ITER =   81     OBJ =   0.27703E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.76078E-01  0.76971E-01
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)   -0.61475E-04 -0.19999E+01
+1
+
+
+
+    FINAL OPTIMIZATION INFORMATION
+
+     OBJ =   0.277028E+03
+
+     DECISION VARIABLES (X-VECTOR)
+       1)    0.76078E-01  0.76971E-01
+
+     CONSTRAINT VALUES (G-VECTOR)
+       1)   -0.61475E-04 -0.19999E+01
+
+     THERE ARE    1 ACTIVE CONSTRAINTS
+     CONSTRAINT NUMBERS ARE
+         1
+
+     THERE ARE    0 VIOLATED CONSTRAINTS
+
+     THERE ARE    0 ACTIVE SIDE CONSTRAINTS
+
+     TERMINATION CRITERION
+          ABS(1-OBJ(I-1)/OBJ(I)) LESS THAN DELFUN FOR  3 ITERATIONS
+
+     NUMBER OF ITERATIONS =   81
+
+     OBJECTIVE FUNCTION WAS EVALUATED          244  TIMES
+
+     CONSTRAINT FUNCTIONS WERE EVALUATED       244  TIMES
+
+     GRADIENT OF OBJECTIVE WAS CALCULATED       80  TIMES
+
+     GRADIENTS OF CONSTRAINTS WERE CALCULATED   80  TIMES

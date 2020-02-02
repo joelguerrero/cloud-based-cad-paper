@@ -1,0 +1,2064 @@
+Dakota version 6.11 released Nov 15 2019.
+Repository revision c3efb375 (2019-11-07) built Dec 24 2019 21:20:10.
+Running serial Dakota executable in serial mode.
+Start time: Sun Jan 26 23:21:39 2020
+
+-----------------------
+Begin DAKOTA input file
+dakota_case.in
+-----------------------
+# Usage:
+#   dakota -i xxx.in -o run.out > stdout.out
+
+
+
+################################################################################
+environment
+    	tabular_data
+        tabular_data_file = 'table_out.dat'
+    	custom_annotated header eval_id	#No interface column
+################################################################################
+    
+
+
+################################################################################    
+method
+  max_iterations = 1000
+  convergence_tolerance = 1e-4
+  
+	#conmin_frcg
+	conmin_mfd
+
+        #optpp_cg
+        #optpp_fd_newton
+        #optpp_g_newton
+        #optpp_newton
+
+        #optpp_pds
+        #optpp_q_newton
+
+################################################################################
+
+
+
+################################################################################    
+model
+  	single
+################################################################################
+
+
+
+################################################################################  
+variables
+
+ 	#continuous_design = 3
+    	#initial_point    	 0.1	0.05	0.05
+    	#initial_point    	 0.04	0.08	0.05
+    	#upper_bounds      	 0.5   	0.2	0.2
+    	#lower_bounds        	 0.01  	0.01	0.01
+    	#descriptors       	'height_to_update'   'dia1_to_update'	'dia2_to_update'
+
+ 	continuous_design = 2
+    	initial_point    	 0.04	0.08
+    	upper_bounds      	 0.5    0.2
+    	lower_bounds        	 0.01  	0.01
+    	descriptors       	'height_to_update'   'dia1_to_update'
+
+        #scale_types = 'value' 'value'
+        #scales = 100 100
+################################################################################	  
+	  
+
+
+################################################################################
+interface
+	fork
+	asynchronous
+	evaluation_concurrency = 4
+	#evaluation_concurrency = 1
+
+        analysis_concurrency = 1
+
+	analysis_driver = 'simulator_script'
+	parameters_file = 'params.in'
+	results_file    = 'results.out'
+	work_directory directory_tag
+
+        copy_files = 'templatedir/*'
+	  
+
+# uncomment to leave params.in and results.out files in work_dir subdirectories
+	named 'workdir' file_save  directory_save
+	aprepro
+	  
+## when using conmin_frcg (above) with analytic_gradients (below), 
+## need to turn off the active set vector as rosenbrock_bb does not parse it.
+ 	deactivate active_set_vector
+################################################################################
+
+
+	
+################################################################################	
+responses
+	num_objective_functions = 1
+
+  	#nonlinear_equality_constraints = 1
+	#nonlinear_equality_targets = 0.000355
+
+  	#nonlinear_inequality_constraints = 1
+	#upper_bounds = 0.000356
+	#lower_bounds = 0.000354
+
+        #primary_scale_types = "value"
+        #primary_scales = 1000000
+
+        #nonlinear_equality_scale_types = "value"
+        #nonlinear_equality_scales = 1000000
+
+
+  	#nonlinear_equality_constraints = 1
+	#nonlinear_equality_targets = 355
+
+  	nonlinear_inequality_constraints = 1
+	upper_bounds = 356
+	lower_bounds = 354
+
+
+ 	numerical_gradients
+ 	   method_source dakota
+	   interval_type forward
+
+	   #fd_gradient_step_size = 1.e-5
+	   #fd_gradient_step_size = 1.e-4
+	   #fd_gradient_step_size = 1.e-3
+	   #fd_gradient_step_size = 1.e-2
+	   #fd_gradient_step_size = 1.e-1
+
+  	#no_gradients
+ 	no_hessians
+
+	sense 'min' 
+
+################################################################################
+
+---------------------
+End DAKOTA input file
+---------------------
+
+Using Dakota input file 'dakota_case.in'
+Writing new restart file 'dakota.rst'.
+
+>>>>> Executing environment.
+
+>>>>> Running conmin_mfd iterator.
+
+---------------------
+Begin Evaluation    1
+---------------------
+Parameters for evaluation 1:
+                      4.0000000000e-02 height_to_update
+                      8.0000000000e-02 dia1_to_update
+
+blocking fork: simulator_script params.in results.out
+
+Active response data for evaluation 1:
+Active set vector = { 1 1 }
+                      2.0106192983e+02 obj_fn
+                      2.0106192983e+02 nln_ineq_con_1
+
+
+
+------------------------------------------
+Begin Dakota derivative estimation routine
+------------------------------------------
+
+>>>>> map at X performed previously and results retrieved
+
+>>>>> Dakota finite difference gradient evaluation for x[1] + h:
+
+---------------------
+Begin Evaluation    2
+---------------------
+Parameters for evaluation 2:
+                      4.0040000000e-02 height_to_update
+                      8.0000000000e-02 dia1_to_update
+
+(Asynchronous job 2 added to queue)
+
+
+>>>>> Dakota finite difference gradient evaluation for x[2] + h:
+
+---------------------
+Begin Evaluation    3
+---------------------
+Parameters for evaluation 3:
+                      4.0000000000e-02 height_to_update
+                      8.0080000000e-02 dia1_to_update
+
+(Asynchronous job 3 added to queue)
+
+
+
+Blocking synchronize of 2 asynchronous evaluations
+First pass: initiating 2 local asynchronous jobs
+Initiating evaluation 2
+nonblocking fork: simulator_script params.in results.out
+Initiating evaluation 3
+nonblocking fork: simulator_script params.in results.out
+Waiting on completed jobs
+Evaluation 3 has completed
+Waiting on completed jobs
+Evaluation 2 has completed
+
+Active response data for evaluation 2:
+Active set vector = { 1 1 }
+                      2.0116246079e+02 obj_fn
+                      2.0126299176e+02 nln_ineq_con_1
+
+
+Active response data for evaluation 3:
+Active set vector = { 1 1 }
+                      2.0136362325e+02 obj_fn
+                      2.0146425475e+02 nln_ineq_con_1
+
+>>>>> Total response returned to iterator:
+
+Active set vector = { 2 2 } Deriv vars vector = { 1 2 }
+ [  2.5132741250e+03  3.7711678125e+03 ] obj_fn gradient
+ [  5.0265482500e+03  5.0290615125e+03 ] nln_ineq_con_1 gradient
+
+
+
+---------------------
+Begin Evaluation    4
+---------------------
+Parameters for evaluation 4:
+                      5.5327096211e-02 height_to_update
+                      9.5091420406e-02 dia1_to_update
+
+blocking fork: simulator_script params.in results.out
+
+Active response data for evaluation 4:
+Active set vector = { 1 1 }
+                      3.0732068679e+02 obj_fn
+                      3.9292569311e+02 nln_ineq_con_1
+
+
+
+---------------------
+Begin Evaluation    5
+---------------------
+Parameters for evaluation 5:
+                      5.2217505150e-02 height_to_update
+                      9.2029643709e-02 dia1_to_update
+
+blocking fork: simulator_script params.in results.out
+
+Active response data for evaluation 5:
+Active set vector = { 1 1 }
+                      2.8400896257e+02 obj_fn
+                      3.4734534337e+02 nln_ineq_con_1
+
+
+
+---------------------
+Begin Evaluation    6
+---------------------
+Parameters for evaluation 6:
+                      5.2686294131e-02 height_to_update
+                      9.2491224397e-02 dia1_to_update
+
+blocking fork: simulator_script params.in results.out
+
+Active response data for evaluation 6:
+Active set vector = { 1 1 }
+                      2.8746619398e+02 obj_fn
+                      3.5398804146e+02 nln_ineq_con_1
+
+
+
+------------------------------------------
+Begin Dakota derivative estimation routine
+------------------------------------------
+
+>>>>> map at X performed previously and results retrieved
+
+>>>>> Dakota finite difference gradient evaluation for x[1] + h:
+
+---------------------
+Begin Evaluation    7
+---------------------
+Parameters for evaluation 7:
+                      5.2738980426e-02 height_to_update
+                      9.2491224397e-02 dia1_to_update
+
+(Asynchronous job 7 added to queue)
+
+
+>>>>> Dakota finite difference gradient evaluation for x[2] + h:
+
+---------------------
+Begin Evaluation    8
+---------------------
+Parameters for evaluation 8:
+                      5.2686294131e-02 height_to_update
+                      9.2583715621e-02 dia1_to_update
+
+(Asynchronous job 8 added to queue)
+
+
+
+Blocking synchronize of 2 asynchronous evaluations
+First pass: initiating 2 local asynchronous jobs
+Initiating evaluation 7
+nonblocking fork: simulator_script params.in results.out
+Initiating evaluation 8
+nonblocking fork: simulator_script params.in results.out
+Waiting on completed jobs
+Evaluation 8 has completed
+Waiting on completed jobs
+Evaluation 7 has completed
+
+Active response data for evaluation 7:
+Active set vector = { 1 1 }
+                      2.8761928443e+02 obj_fn
+                      3.5434202954e+02 nln_ineq_con_1
+
+
+Active response data for evaluation 8:
+Active set vector = { 1 1 }
+                      2.8788817029e+02 obj_fn
+                      3.5469637149e+02 nln_ineq_con_1
+
+>>>>> Total response returned to iterator:
+
+Active set vector = { 2 2 } Deriv vars vector = { 1 2 }
+ [  2.9056978389e+03  4.5623388895e+03 ] obj_fn gradient
+ [  6.7187887635e+03  7.6583485797e+03 ] nln_ineq_con_1 gradient
+
+
+
+---------------------
+Begin Evaluation    9
+---------------------
+Parameters for evaluation 9:
+                      5.2687068782e-02 height_to_update
+                      9.2492106288e-02 dia1_to_update
+
+blocking fork: simulator_script params.in results.out
+
+Active response data for evaluation 9:
+Active set vector = { 1 1 }
+                      2.8747246711e+02 obj_fn
+                      3.5399999674e+02 nln_ineq_con_1
+
+
+
+---------------------
+Begin Evaluation   10
+---------------------
+Parameters for evaluation 10:
+                      5.2687068993e-02 height_to_update
+                      9.2492106528e-02 dia1_to_update
+
+blocking fork: simulator_script params.in results.out
+
+Active response data for evaluation 10:
+Active set vector = { 1 1 }
+                      2.8747246882e+02 obj_fn
+                      3.5399999999e+02 nln_ineq_con_1
+
+
+
+------------------------------------------
+Begin Dakota derivative estimation routine
+------------------------------------------
+
+>>>>> map at X performed previously and results retrieved
+
+>>>>> Dakota finite difference gradient evaluation for x[1] + h:
+
+---------------------
+Begin Evaluation   11
+---------------------
+Parameters for evaluation 11:
+                      5.2739756062e-02 height_to_update
+                      9.2492106528e-02 dia1_to_update
+
+(Asynchronous job 11 added to queue)
+
+
+>>>>> Dakota finite difference gradient evaluation for x[2] + h:
+
+---------------------
+Begin Evaluation   12
+---------------------
+Parameters for evaluation 12:
+                      5.2687068993e-02 height_to_update
+                      9.2584598635e-02 dia1_to_update
+
+(Asynchronous job 12 added to queue)
+
+
+
+Blocking synchronize of 2 asynchronous evaluations
+First pass: initiating 2 local asynchronous jobs
+Initiating evaluation 11
+nonblocking fork: simulator_script params.in results.out
+Initiating evaluation 12
+nonblocking fork: simulator_script params.in results.out
+Waiting on completed jobs
+Evaluation 12 has completed
+Waiting on completed jobs
+Evaluation 11 has completed
+
+Active response data for evaluation 11:
+Active set vector = { 1 1 }
+                      2.8762556296e+02 obj_fn
+                      3.5435400000e+02 nln_ineq_con_1
+
+
+Active response data for evaluation 12:
+Active set vector = { 1 1 }
+                      2.8789445396e+02 obj_fn
+                      3.5470835394e+02 nln_ineq_con_1
+
+>>>>> Total response returned to iterator:
+
+Active set vector = { 2 2 } Deriv vars vector = { 1 2 }
+ [  2.9057252932e+03  4.5623908552e+03 ] obj_fn gradient
+ [  6.7189163065e+03  7.6585340802e+03 ] nln_ineq_con_1 gradient
+
+
+
+---------------------
+Begin Evaluation   13
+---------------------
+Parameters for evaluation 13:
+                      1.6264945528e-01 height_to_update
+                      1.0000000000e-02 dia1_to_update
+
+blocking fork: simulator_script params.in results.out
+
+Active response data for evaluation 13:
+Active set vector = { 1 1 }
+                      5.2668629715e+01 obj_fn
+                      1.2774458347e+01 nln_ineq_con_1
+
+
+
+---------------------
+Begin Evaluation   14
+---------------------
+Parameters for evaluation 14:
+                      1.5165321403e-01 height_to_update
+                      1.8249212620e-02 dia1_to_update
+
+blocking fork: simulator_script params.in results.out
+
+Active response data for evaluation 14:
+Active set vector = { 1 1 }
+                      9.2176484450e+01 obj_fn
+                      3.9667037105e+01 nln_ineq_con_1
+
+
+
+---------------------
+Begin Evaluation   15
+---------------------
+Parameters for evaluation 15:
+                      1.6264945528e-01 height_to_update
+                      1.0000000000e-02 dia1_to_update
+
+Duplication detected: analysis_drivers not invoked.
+
+Active response data retrieved from database:
+Active set vector = { 1 1 }
+                      5.2668629715e+01 obj_fn
+                      1.2774458347e+01 nln_ineq_con_1
+
+
+
+---------------------
+Begin Evaluation   16
+---------------------
+Parameters for evaluation 16:
+                      5.2742682563e-02 height_to_update
+                      9.2450386078e-02 dia1_to_update
+
+blocking fork: simulator_script params.in results.out
+
+Active response data for evaluation 16:
+Active set vector = { 1 1 }
+                      2.8744373662e+02 obj_fn
+                      3.5405404008e+02 nln_ineq_con_1
+
+
+
+---------------------
+Begin Evaluation   17
+---------------------
+Parameters for evaluation 17:
+                      5.2965136843e-02 height_to_update
+                      9.2283504275e-02 dia1_to_update
+
+blocking fork: simulator_script params.in results.out
+
+Active response data for evaluation 17:
+Active set vector = { 1 1 }
+                      2.8732789677e+02 obj_fn
+                      3.5426490808e+02 nln_ineq_con_1
+
+
+
+---------------------
+Begin Evaluation   18
+---------------------
+Parameters for evaluation 18:
+                      5.4077408240e-02 height_to_update
+                      9.1449095261e-02 dia1_to_update
+
+blocking fork: simulator_script params.in results.out
+
+Active response data for evaluation 18:
+Active set vector = { 1 1 }
+                      2.8672683337e+02 obj_fn
+                      3.5519314602e+02 nln_ineq_con_1
+
+
+
+------------------------------------------
+Begin Dakota derivative estimation routine
+------------------------------------------
+
+>>>>> map at X performed previously and results retrieved
+
+>>>>> Dakota finite difference gradient evaluation for x[1] + h:
+
+---------------------
+Begin Evaluation   19
+---------------------
+Parameters for evaluation 19:
+                      5.4131485648e-02 height_to_update
+                      9.1449095261e-02 dia1_to_update
+
+(Asynchronous job 19 added to queue)
+
+
+>>>>> Dakota finite difference gradient evaluation for x[2] + h:
+
+---------------------
+Begin Evaluation   20
+---------------------
+Parameters for evaluation 20:
+                      5.4077408240e-02 height_to_update
+                      9.1540544356e-02 dia1_to_update
+
+(Asynchronous job 20 added to queue)
+
+
+
+Blocking synchronize of 2 asynchronous evaluations
+First pass: initiating 2 local asynchronous jobs
+Initiating evaluation 19
+nonblocking fork: simulator_script params.in results.out
+Initiating evaluation 20
+nonblocking fork: simulator_script params.in results.out
+Waiting on completed jobs
+Evaluation 20 has completed
+Waiting on completed jobs
+Evaluation 19 has completed
+
+Active response data for evaluation 19:
+Active set vector = { 1 1 }
+                      2.8688219550e+02 obj_fn
+                      3.5554833917e+02 nln_ineq_con_1
+
+
+Active response data for evaluation 20:
+Active set vector = { 1 1 }
+                      2.8714505629e+02 obj_fn
+                      3.5590388754e+02 nln_ineq_con_1
+
+>>>>> Total response returned to iterator:
+
+Active set vector = { 2 0 } Deriv vars vector = { 1 2 }
+ [  2.8729581549e+03  4.5732866554e+03 ] obj_fn gradient
+
+
+
+---------------------
+Begin Evaluation   21
+---------------------
+Parameters for evaluation 21:
+                      5.4040783143e-02 height_to_update
+                      9.1390794005e-02 dia1_to_update
+
+blocking fork: simulator_script params.in results.out
+
+Active response data for evaluation 21:
+Active set vector = { 1 1 }
+                      2.8635518690e+02 obj_fn
+                      3.5450014443e+02 nln_ineq_con_1
+
+
+
+---------------------
+Begin Evaluation   22
+---------------------
+Parameters for evaluation 22:
+                      5.4014350537e-02 height_to_update
+                      9.1348717554e-02 dia1_to_update
+
+blocking fork: simulator_script params.in results.out
+
+Active response data for evaluation 22:
+Active set vector = { 1 1 }
+                      2.8608711653e+02 obj_fn
+                      3.5400056015e+02 nln_ineq_con_1
+
+
+
+---------------------
+Begin Evaluation   23
+---------------------
+Parameters for evaluation 23:
+                      5.4014320886e-02 height_to_update
+                      9.1348670354e-02 dia1_to_update
+
+blocking fork: simulator_script params.in results.out
+
+Active response data for evaluation 23:
+Active set vector = { 1 1 }
+                      2.8608681589e+02 obj_fn
+                      3.5400000000e+02 nln_ineq_con_1
+
+
+
+------------------------------------------
+Begin Dakota derivative estimation routine
+------------------------------------------
+
+>>>>> map at X performed previously and results retrieved
+
+>>>>> Dakota finite difference gradient evaluation for x[1] + h:
+
+---------------------
+Begin Evaluation   24
+---------------------
+Parameters for evaluation 24:
+                      5.4068335207e-02 height_to_update
+                      9.1348670354e-02 dia1_to_update
+
+(Asynchronous job 24 added to queue)
+
+
+>>>>> Dakota finite difference gradient evaluation for x[2] + h:
+
+---------------------
+Begin Evaluation   25
+---------------------
+Parameters for evaluation 25:
+                      5.4014320886e-02 height_to_update
+                      9.1440019024e-02 dia1_to_update
+
+(Asynchronous job 25 added to queue)
+
+
+
+Blocking synchronize of 2 asynchronous evaluations
+First pass: initiating 2 local asynchronous jobs
+Initiating evaluation 24
+nonblocking fork: simulator_script params.in results.out
+Initiating evaluation 25
+nonblocking fork: simulator_script params.in results.out
+Waiting on completed jobs
+Evaluation 24 has completed
+Waiting on completed jobs
+Evaluation 25 has completed
+
+Active response data for evaluation 24:
+Active set vector = { 1 1 }
+                      2.8624182636e+02 obj_fn
+                      3.5435400000e+02 nln_ineq_con_1
+
+
+Active response data for evaluation 25:
+Active set vector = { 1 1 }
+                      2.8650411013e+02 obj_fn
+                      3.5470835400e+02 nln_ineq_con_1
+
+>>>>> Total response returned to iterator:
+
+Active set vector = { 2 2 } Deriv vars vector = { 1 2 }
+ [  2.8698030718e+03  4.5681479367e+03 ] obj_fn gradient
+ [  6.5538173802e+03  7.7543985616e+03 ] nln_ineq_con_1 gradient
+
+
+
+---------------------
+Begin Evaluation   26
+---------------------
+Parameters for evaluation 26:
+                      5.5483088813e-02 height_to_update
+                      9.0274845709e-02 dia1_to_update
+
+blocking fork: simulator_script params.in results.out
+
+Active response data for evaluation 26:
+Active set vector = { 1 1 }
+                      2.8536660531e+02 obj_fn
+                      3.5512726921e+02 nln_ineq_con_1
+
+
+
+---------------------
+Begin Evaluation   27
+---------------------
+Parameters for evaluation 27:
+                      5.6620207603e-02 height_to_update
+                      8.9443491648e-02 dia1_to_update
+
+blocking fork: simulator_script params.in results.out
+
+Active response data for evaluation 27:
+Active set vector = { 1 1 }
+                      2.8476583852e+02 obj_fn
+                      3.5576140209e+02 nln_ineq_con_1
+
+
+
+---------------------
+Begin Evaluation   28
+---------------------
+Parameters for evaluation 28:
+                      5.7187748315e-02 height_to_update
+                      8.9028559382e-02 dia1_to_update
+
+blocking fork: simulator_script params.in results.out
+
+Active response data for evaluation 28:
+Active set vector = { 1 1 }
+                      2.8445189524e+02 obj_fn
+                      3.5600128889e+02 nln_ineq_con_1
+
+
+
+------------------------------------------
+Begin Dakota derivative estimation routine
+------------------------------------------
+
+>>>>> map at X performed previously and results retrieved
+
+>>>>> Dakota finite difference gradient evaluation for x[1] + h:
+
+---------------------
+Begin Evaluation   29
+---------------------
+Parameters for evaluation 29:
+                      5.6676827811e-02 height_to_update
+                      8.9443491648e-02 dia1_to_update
+
+(Asynchronous job 29 added to queue)
+
+
+>>>>> Dakota finite difference gradient evaluation for x[2] + h:
+
+---------------------
+Begin Evaluation   30
+---------------------
+Parameters for evaluation 30:
+                      5.6620207603e-02 height_to_update
+                      8.9532935140e-02 dia1_to_update
+
+(Asynchronous job 30 added to queue)
+
+
+
+Blocking synchronize of 2 asynchronous evaluations
+First pass: initiating 2 local asynchronous jobs
+Initiating evaluation 29
+nonblocking fork: simulator_script params.in results.out
+Initiating evaluation 30
+nonblocking fork: simulator_script params.in results.out
+Waiting on completed jobs
+Evaluation 29 has completed
+Waiting on completed jobs
+Evaluation 30 has completed
+
+Active response data for evaluation 29:
+Active set vector = { 1 1 }
+                      2.8492493849e+02 obj_fn
+                      3.5611716351e+02 nln_ineq_con_1
+
+
+Active response data for evaluation 30:
+Active set vector = { 1 1 }
+                      2.8517639590e+02 obj_fn
+                      3.5647328064e+02 nln_ineq_con_1
+
+>>>>> Total response returned to iterator:
+
+Active set vector = { 2 0 } Deriv vars vector = { 1 2 }
+ [  2.8099502763e+03  4.5901313381e+03 ] obj_fn gradient
+
+
+
+---------------------
+Begin Evaluation   31
+---------------------
+Parameters for evaluation 31:
+                      5.6525596261e-02 height_to_update
+                      8.9288941409e-02 dia1_to_update
+
+blocking fork: simulator_script params.in results.out
+
+Active response data for evaluation 31:
+Active set vector = { 1 1 }
+                      2.8379163117e+02 obj_fn
+                      3.5394059917e+02 nln_ineq_con_1
+
+
+
+---------------------
+Begin Evaluation   32
+---------------------
+Parameters for evaluation 32:
+                      5.6528682807e-02 height_to_update
+                      8.9293983367e-02 dia1_to_update
+
+blocking fork: simulator_script params.in results.out
+
+Active response data for evaluation 32:
+Active set vector = { 1 1 }
+                      2.8382338683e+02 obj_fn
+                      3.5399990179e+02 nln_ineq_con_1
+
+
+
+---------------------
+Begin Evaluation   33
+---------------------
+Parameters for evaluation 33:
+                      5.6528687918e-02 height_to_update
+                      8.9293991717e-02 dia1_to_update
+
+blocking fork: simulator_script params.in results.out
+
+Active response data for evaluation 33:
+Active set vector = { 1 1 }
+                      2.8382343942e+02 obj_fn
+                      3.5400000000e+02 nln_ineq_con_1
+
+
+
+------------------------------------------
+Begin Dakota derivative estimation routine
+------------------------------------------
+
+>>>>> map at X performed previously and results retrieved
+
+>>>>> Dakota finite difference gradient evaluation for x[1] + h:
+
+---------------------
+Begin Evaluation   34
+---------------------
+Parameters for evaluation 34:
+                      5.6585211490e-02 height_to_update
+                      8.9293983367e-02 dia1_to_update
+
+(Asynchronous job 34 added to queue)
+
+
+>>>>> Dakota finite difference gradient evaluation for x[2] + h:
+
+---------------------
+Begin Evaluation   35
+---------------------
+Parameters for evaluation 35:
+                      5.6528682807e-02 height_to_update
+                      8.9383277351e-02 dia1_to_update
+
+(Asynchronous job 35 added to queue)
+
+
+
+Blocking synchronize of 2 asynchronous evaluations
+First pass: initiating 2 local asynchronous jobs
+Initiating evaluation 34
+nonblocking fork: simulator_script params.in results.out
+Initiating evaluation 35
+nonblocking fork: simulator_script params.in results.out
+Waiting on completed jobs
+Evaluation 34 has completed
+Waiting on completed jobs
+Evaluation 35 has completed
+
+Active response data for evaluation 34:
+Active set vector = { 1 1 }
+                      2.8398196409e+02 obj_fn
+                      3.5435390168e+02 nln_ineq_con_1
+
+
+Active response data for evaluation 35:
+Active set vector = { 1 1 }
+                      2.8423258156e+02 obj_fn
+                      3.5470825557e+02 nln_ineq_con_1
+
+>>>>> Total response returned to iterator:
+
+Active set vector = { 2 2 } Deriv vars vector = { 1 2 }
+ [  2.8052530702e+03  4.5825566132e+03 ] obj_fn gradient
+ [  6.2623055664e+03  7.9328276138e+03 ] nln_ineq_con_1 gradient
+
+
+
+---------------------
+Begin Evaluation   36
+---------------------
+Parameters for evaluation 36:
+                      5.9432138165e-02 height_to_update
+                      8.7271126426e-02 dia1_to_update
+
+blocking fork: simulator_script params.in results.out
+
+Active response data for evaluation 36:
+Active set vector = { 1 1 }
+                      2.8258105664e+02 obj_fn
+                      3.5551047320e+02 nln_ineq_con_1
+
+
+
+---------------------
+Begin Evaluation   37
+---------------------
+Parameters for evaluation 37:
+                      6.0373053115e-02 height_to_update
+                      8.6615584630e-02 dia1_to_update
+
+blocking fork: simulator_script params.in results.out
+
+Active response data for evaluation 37:
+Active set vector = { 1 1 }
+                      2.8212686543e+02 obj_fn
+                      3.5573377628e+02 nln_ineq_con_1
+
+
+
+---------------------
+Begin Evaluation   38
+---------------------
+Parameters for evaluation 38:
+                      6.1494819411e-02 height_to_update
+                      8.5834042482e-02 dia1_to_update
+
+blocking fork: simulator_script params.in results.out
+
+Active response data for evaluation 38:
+Active set vector = { 1 1 }
+                      2.8155237254e+02 obj_fn
+                      3.5583408413e+02 nln_ineq_con_1
+
+
+
+------------------------------------------
+Begin Dakota derivative estimation routine
+------------------------------------------
+
+>>>>> map at X performed previously and results retrieved
+
+>>>>> Dakota finite difference gradient evaluation for x[1] + h:
+
+---------------------
+Begin Evaluation   39
+---------------------
+Parameters for evaluation 39:
+                      6.1556314230e-02 height_to_update
+                      8.5834042482e-02 dia1_to_update
+
+(Asynchronous job 39 added to queue)
+
+
+>>>>> Dakota finite difference gradient evaluation for x[2] + h:
+
+---------------------
+Begin Evaluation   40
+---------------------
+Parameters for evaluation 40:
+                      6.1494819411e-02 height_to_update
+                      8.5919876524e-02 dia1_to_update
+
+(Asynchronous job 40 added to queue)
+
+
+
+Blocking synchronize of 2 asynchronous evaluations
+First pass: initiating 2 local asynchronous jobs
+Initiating evaluation 39
+nonblocking fork: simulator_script params.in results.out
+Initiating evaluation 40
+nonblocking fork: simulator_script params.in results.out
+Waiting on completed jobs
+Evaluation 39 has completed
+Waiting on completed jobs
+Evaluation 40 has completed
+
+Active response data for evaluation 39:
+Active set vector = { 1 1 }
+                      2.8171819676e+02 obj_fn
+                      3.5618991821e+02 nln_ineq_con_1
+
+
+Active response data for evaluation 40:
+Active set vector = { 1 1 }
+                      2.8194976878e+02 obj_fn
+                      3.5654610811e+02 nln_ineq_con_1
+
+>>>>> Total response returned to iterator:
+
+Active set vector = { 2 0 } Deriv vars vector = { 1 2 }
+ [  2.6965559959e+03  4.6298208439e+03 ] obj_fn gradient
+
+
+
+---------------------
+Begin Evaluation   41
+---------------------
+Parameters for evaluation 41:
+                      6.1345244130e-02 height_to_update
+                      8.5577230922e-02 dia1_to_update
+
+blocking fork: simulator_script params.in results.out
+
+Active response data for evaluation 41:
+Active set vector = { 1 1 }
+                      2.7996263187e+02 obj_fn
+                      3.5284765844e+02 nln_ineq_con_1
+
+
+
+---------------------
+Begin Evaluation   42
+---------------------
+Parameters for evaluation 42:
+                      6.1402959215e-02 height_to_update
+                      8.5676324174e-02 dia1_to_update
+
+blocking fork: simulator_script params.in results.out
+
+Active response data for evaluation 42:
+Active set vector = { 1 1 }
+                      2.8057551739e+02 obj_fn
+                      3.5399802083e+02 nln_ineq_con_1
+
+
+
+---------------------
+Begin Evaluation   43
+---------------------
+Parameters for evaluation 43:
+                      6.1403058405e-02 height_to_update
+                      8.5676494477e-02 dia1_to_update
+
+blocking fork: simulator_script params.in results.out
+
+Active response data for evaluation 43:
+Active set vector = { 1 1 }
+                      2.8057657129e+02 obj_fn
+                      3.5400000000e+02 nln_ineq_con_1
+
+
+
+------------------------------------------
+Begin Dakota derivative estimation routine
+------------------------------------------
+
+>>>>> map at X performed previously and results retrieved
+
+>>>>> Dakota finite difference gradient evaluation for x[1] + h:
+
+---------------------
+Begin Evaluation   44
+---------------------
+Parameters for evaluation 44:
+                      6.1464461463e-02 height_to_update
+                      8.5676494477e-02 dia1_to_update
+
+(Asynchronous job 44 added to queue)
+
+
+>>>>> Dakota finite difference gradient evaluation for x[2] + h:
+
+---------------------
+Begin Evaluation   45
+---------------------
+Parameters for evaluation 45:
+                      6.1403058405e-02 height_to_update
+                      8.5762170971e-02 dia1_to_update
+
+(Asynchronous job 45 added to queue)
+
+
+
+Blocking synchronize of 2 asynchronous evaluations
+First pass: initiating 2 local asynchronous jobs
+Initiating evaluation 44
+nonblocking fork: simulator_script params.in results.out
+Initiating evaluation 45
+nonblocking fork: simulator_script params.in results.out
+Waiting on completed jobs
+Evaluation 44 has completed
+Waiting on completed jobs
+Evaluation 45 has completed
+
+Active response data for evaluation 44:
+Active set vector = { 1 1 }
+                      2.8074184416e+02 obj_fn
+                      3.5435400001e+02 nln_ineq_con_1
+
+
+Active response data for evaluation 45:
+Active set vector = { 1 1 }
+                      2.8097256685e+02 obj_fn
+                      3.5470835397e+02 nln_ineq_con_1
+
+>>>>> Total response returned to iterator:
+
+Active set vector = { 2 2 } Deriv vars vector = { 1 2 }
+ [  2.6916065306e+03  4.6219859883e+03 ] obj_fn gradient
+ [  5.7651852887e+03  8.2677748118e+03 ] nln_ineq_con_1 gradient
+
+
+
+---------------------
+Begin Evaluation   46
+---------------------
+Parameters for evaluation 46:
+                      6.7620371515e-02 height_to_update
+                      8.1707791906e-02 dia1_to_update
+
+blocking fork: simulator_script params.in results.out
+
+Active response data for evaluation 46:
+Active set vector = { 1 1 }
+                      2.7844541622e+02 obj_fn
+                      3.5456379104e+02 nln_ineq_con_1
+
+
+
+---------------------
+Begin Evaluation   47
+---------------------
+Parameters for evaluation 47:
+                      8.3458439384e-02 height_to_update
+                      7.1597865068e-02 dia1_to_update
+
+blocking fork: simulator_script params.in results.out
+
+Active response data for evaluation 47:
+Active set vector = { 1 1 }
+                      2.6824718909e+02 obj_fn
+                      3.3601625402e+02 nln_ineq_con_1
+
+
+
+---------------------
+Begin Evaluation   48
+---------------------
+Parameters for evaluation 48:
+                      6.6393967444e-02 height_to_update
+                      8.2490643421e-02 dia1_to_update
+
+blocking fork: simulator_script params.in results.out
+
+Active response data for evaluation 48:
+Active set vector = { 1 1 }
+                      2.7894936993e+02 obj_fn
+                      3.5483617140e+02 nln_ineq_con_1
+
+
+
+------------------------------------------
+Begin Dakota derivative estimation routine
+------------------------------------------
+
+>>>>> map at X performed previously and results retrieved
+
+>>>>> Dakota finite difference gradient evaluation for x[1] + h:
+
+---------------------
+Begin Evaluation   49
+---------------------
+Parameters for evaluation 49:
+                      6.7687991887e-02 height_to_update
+                      8.1707791906e-02 dia1_to_update
+
+(Asynchronous job 49 added to queue)
+
+
+>>>>> Dakota finite difference gradient evaluation for x[2] + h:
+
+---------------------
+Begin Evaluation   50
+---------------------
+Parameters for evaluation 50:
+                      6.7620371515e-02 height_to_update
+                      8.1789499698e-02 dia1_to_update
+
+(Asynchronous job 50 added to queue)
+
+
+
+Blocking synchronize of 2 asynchronous evaluations
+First pass: initiating 2 local asynchronous jobs
+Initiating evaluation 49
+nonblocking fork: simulator_script params.in results.out
+Initiating evaluation 50
+nonblocking fork: simulator_script params.in results.out
+Waiting on completed jobs
+Evaluation 49 has completed
+Waiting on completed jobs
+Evaluation 50 has completed
+
+Active response data for evaluation 49:
+Active set vector = { 1 1 }
+                      2.7861899270e+02 obj_fn
+                      3.5491835483e+02 nln_ineq_con_1
+
+
+Active response data for evaluation 50:
+Active set vector = { 1 1 }
+                      2.7882883542e+02 obj_fn
+                      3.5527327317e+02 nln_ineq_con_1
+
+>>>>> Total response returned to iterator:
+
+Active set vector = { 2 0 } Deriv vars vector = { 1 2 }
+ [  2.5669259294e+03  4.6925659604e+03 ] obj_fn gradient
+
+
+
+---------------------
+Begin Evaluation   51
+---------------------
+Parameters for evaluation 51:
+                      6.7482197244e-02 height_to_update
+                      8.1455197207e-02 dia1_to_update
+
+blocking fork: simulator_script params.in results.out
+
+Active response data for evaluation 51:
+Active set vector = { 1 1 }
+                      2.7690783866e+02 obj_fn
+                      3.5165491776e+02 nln_ineq_con_1
+
+
+
+---------------------
+Begin Evaluation   52
+---------------------
+Parameters for evaluation 52:
+                      6.7593590900e-02 height_to_update
+                      8.1658834590e-02 dia1_to_update
+
+blocking fork: simulator_script params.in results.out
+
+Active response data for evaluation 52:
+Active set vector = { 1 1 }
+                      2.7814707856e+02 obj_fn
+                      3.5399877183e+02 nln_ineq_con_1
+
+
+
+---------------------
+Begin Evaluation   53
+---------------------
+Parameters for evaluation 53:
+                      6.7593649143e-02 height_to_update
+                      8.1658941063e-02 dia1_to_update
+
+blocking fork: simulator_script params.in results.out
+
+Active response data for evaluation 53:
+Active set vector = { 1 1 }
+                      2.7814772720e+02 obj_fn
+                      3.5399999996e+02 nln_ineq_con_1
+
+
+
+------------------------------------------
+Begin Dakota derivative estimation routine
+------------------------------------------
+
+>>>>> map at X performed previously and results retrieved
+
+>>>>> Dakota finite difference gradient evaluation for x[1] + h:
+
+---------------------
+Begin Evaluation   54
+---------------------
+Parameters for evaluation 54:
+                      6.7661242792e-02 height_to_update
+                      8.1658941063e-02 dia1_to_update
+
+(Asynchronous job 54 added to queue)
+
+
+>>>>> Dakota finite difference gradient evaluation for x[2] + h:
+
+---------------------
+Begin Evaluation   55
+---------------------
+Parameters for evaluation 55:
+                      6.7593649143e-02 height_to_update
+                      8.1740600004e-02 dia1_to_update
+
+(Asynchronous job 55 added to queue)
+
+
+
+Blocking synchronize of 2 asynchronous evaluations
+First pass: initiating 2 local asynchronous jobs
+Initiating evaluation 54
+nonblocking fork: simulator_script params.in results.out
+Initiating evaluation 55
+nonblocking fork: simulator_script params.in results.out
+Waiting on completed jobs
+Evaluation 55 has completed
+Waiting on completed jobs
+Evaluation 54 has completed
+
+Active response data for evaluation 54:
+Active set vector = { 1 1 }
+                      2.7832113136e+02 obj_fn
+                      3.5435399997e+02 nln_ineq_con_1
+
+
+Active response data for evaluation 55:
+Active set vector = { 1 1 }
+                      2.7853072323e+02 obj_fn
+                      3.5470835395e+02 nln_ineq_con_1
+
+>>>>> Total response returned to iterator:
+
+Active set vector = { 2 2 } Deriv vars vector = { 1 2 }
+ [  2.5653913230e+03  4.6901910436e+03 ] obj_fn gradient
+ [  5.2371784700e+03  8.6745429316e+03 ] nln_ineq_con_1 gradient
+
+
+
+---------------------
+Begin Evaluation   56
+---------------------
+Parameters for evaluation 56:
+                      7.6757307771e-02 height_to_update
+                      7.6389772127e-02 dia1_to_update
+
+blocking fork: simulator_script params.in results.out
+
+Active response data for evaluation 56:
+Active set vector = { 1 1 }
+                      2.7586865109e+02 obj_fn
+                      3.5178720870e+02 nln_ineq_con_1
+
+
+
+---------------------
+Begin Evaluation   57
+---------------------
+Parameters for evaluation 57:
+                      7.5840941690e-02 height_to_update
+                      7.6916689146e-02 dia1_to_update
+
+blocking fork: simulator_script params.in results.out
+
+Active response data for evaluation 57:
+Active set vector = { 1 1 }
+                      2.7619383039e+02 obj_fn
+                      3.5239907685e+02 nln_ineq_con_1
+
+
+
+---------------------
+Begin Evaluation   58
+---------------------
+Parameters for evaluation 58:
+                      7.0448008906e-02 height_to_update
+                      8.0017663882e-02 dia1_to_update
+
+blocking fork: simulator_script params.in results.out
+
+Active response data for evaluation 58:
+Active set vector = { 1 1 }
+                      2.7766961530e+02 obj_fn
+                      3.5426670692e+02 nln_ineq_con_1
+
+
+
+------------------------------------------
+Begin Dakota derivative estimation routine
+------------------------------------------
+
+>>>>> map at X performed previously and results retrieved
+
+>>>>> Dakota finite difference gradient evaluation for x[1] + h:
+
+---------------------
+Begin Evaluation   59
+---------------------
+Parameters for evaluation 59:
+                      7.0518456915e-02 height_to_update
+                      8.0017663882e-02 dia1_to_update
+
+(Asynchronous job 59 added to queue)
+
+
+>>>>> Dakota finite difference gradient evaluation for x[2] + h:
+
+---------------------
+Begin Evaluation   60
+---------------------
+Parameters for evaluation 60:
+                      7.0448008906e-02 height_to_update
+                      8.0097681546e-02 dia1_to_update
+
+(Asynchronous job 60 added to queue)
+
+
+
+Blocking synchronize of 2 asynchronous evaluations
+First pass: initiating 2 local asynchronous jobs
+Initiating evaluation 59
+nonblocking fork: simulator_script params.in results.out
+Initiating evaluation 60
+nonblocking fork: simulator_script params.in results.out
+Waiting on completed jobs
+Evaluation 59 has completed
+Waiting on completed jobs
+Evaluation 60 has completed
+
+Active response data for evaluation 59:
+Active set vector = { 1 1 }
+                      2.7784670953e+02 obj_fn
+                      3.5462097358e+02 nln_ineq_con_1
+
+
+Active response data for evaluation 60:
+Active set vector = { 1 1 }
+                      2.7804796089e+02 obj_fn
+                      3.5497559465e+02 nln_ineq_con_1
+
+>>>>> Total response returned to iterator:
+
+Active set vector = { 2 0 } Deriv vars vector = { 1 2 }
+ [  2.5138287334e+03  4.7282758037e+03 ] obj_fn gradient
+
+
+
+---------------------
+Begin Evaluation   61
+---------------------
+Parameters for evaluation 61:
+                      7.0414076617e-02 height_to_update
+                      7.9953840433e-02 dia1_to_update
+
+blocking fork: simulator_script params.in results.out
+
+Active response data for evaluation 61:
+Active set vector = { 1 1 }
+                      2.7728275272e+02 obj_fn
+                      3.5353142847e+02 nln_ineq_con_1
+
+
+
+---------------------
+Begin Evaluation   62
+---------------------
+Parameters for evaluation 62:
+                      7.0435700676e-02 height_to_update
+                      7.9994513257e-02 dia1_to_update
+
+blocking fork: simulator_script params.in results.out
+
+Active response data for evaluation 62:
+Active set vector = { 1 1 }
+                      2.7752925848e+02 obj_fn
+                      3.5399988506e+02 nln_ineq_con_1
+
+
+
+---------------------
+Begin Evaluation   63
+---------------------
+Parameters for evaluation 63:
+                      7.0435705979e-02 height_to_update
+                      7.9994523232e-02 dia1_to_update
+
+blocking fork: simulator_script params.in results.out
+
+Active response data for evaluation 63:
+Active set vector = { 1 1 }
+                      2.7752931891e+02 obj_fn
+                      3.5399999994e+02 nln_ineq_con_1
+
+
+
+------------------------------------------
+Begin Dakota derivative estimation routine
+------------------------------------------
+
+>>>>> map at X performed previously and results retrieved
+
+>>>>> Dakota finite difference gradient evaluation for x[1] + h:
+
+---------------------
+Begin Evaluation   64
+---------------------
+Parameters for evaluation 64:
+                      7.0506136377e-02 height_to_update
+                      7.9994513257e-02 dia1_to_update
+
+(Asynchronous job 64 added to queue)
+
+
+>>>>> Dakota finite difference gradient evaluation for x[2] + h:
+
+---------------------
+Begin Evaluation   65
+---------------------
+Parameters for evaluation 65:
+                      7.0435700676e-02 height_to_update
+                      8.0074507771e-02 dia1_to_update
+
+(Asynchronous job 65 added to queue)
+
+
+
+Blocking synchronize of 2 asynchronous evaluations
+First pass: initiating 2 local asynchronous jobs
+Initiating evaluation 64
+nonblocking fork: simulator_script params.in results.out
+Initiating evaluation 65
+nonblocking fork: simulator_script params.in results.out
+Waiting on completed jobs
+Evaluation 65 has completed
+Waiting on completed jobs
+Evaluation 64 has completed
+
+Active response data for evaluation 64:
+Active set vector = { 1 1 }
+                      2.7770627056e+02 obj_fn
+                      3.5435388494e+02 nln_ineq_con_1
+
+
+Active response data for evaluation 65:
+Active set vector = { 1 1 }
+                      2.7790740541e+02 obj_fn
+                      3.5470823880e+02 nln_ineq_con_1
+
+>>>>> Total response returned to iterator:
+
+Active set vector = { 2 2 } Deriv vars vector = { 1 2 }
+ [  2.5131017268e+03  4.7271609089e+03 ] obj_fn gradient
+ [  5.0258587279e+03  8.8550290783e+03 ] nln_ineq_con_1 gradient
+
+
+
+---------------------
+Begin Evaluation   66
+---------------------
+Parameters for evaluation 66:
+                      7.4116756333e-02 height_to_update
+                      7.7972256167e-02 dia1_to_update
+
+blocking fork: simulator_script params.in results.out
+
+Active response data for evaluation 66:
+Active set vector = { 1 1 }
+                      2.7705350854e+02 obj_fn
+                      3.5390482830e+02 nln_ineq_con_1
+
+
+
+---------------------
+Begin Evaluation   67
+---------------------
+Parameters for evaluation 67:
+                      7.3748650679e-02 height_to_update
+                      7.8174481924e-02 dia1_to_update
+
+blocking fork: simulator_script params.in results.out
+
+Active response data for evaluation 67:
+Active set vector = { 1 1 }
+                      2.7711634963e+02 obj_fn
+                      3.5397613557e+02 nln_ineq_con_1
+
+
+
+---------------------
+Begin Evaluation   68
+---------------------
+Parameters for evaluation 68:
+                      7.3606477497e-02 height_to_update
+                      7.8252587433e-02 dia1_to_update
+
+blocking fork: simulator_script params.in results.out
+
+Active response data for evaluation 68:
+Active set vector = { 1 1 }
+                      2.7713971255e+02 obj_fn
+                      3.5400005456e+02 nln_ineq_con_1
+
+
+
+------------------------------------------
+Begin Dakota derivative estimation routine
+------------------------------------------
+
+>>>>> map at X performed previously and results retrieved
+
+>>>>> Dakota finite difference gradient evaluation for x[1] + h:
+
+---------------------
+Begin Evaluation   69
+---------------------
+Parameters for evaluation 69:
+                      7.3680083975e-02 height_to_update
+                      7.8252587433e-02 dia1_to_update
+
+(Asynchronous job 69 added to queue)
+
+
+>>>>> Dakota finite difference gradient evaluation for x[2] + h:
+
+---------------------
+Begin Evaluation   70
+---------------------
+Parameters for evaluation 70:
+                      7.3606477497e-02 height_to_update
+                      7.8330840020e-02 dia1_to_update
+
+(Asynchronous job 70 added to queue)
+
+
+
+Blocking synchronize of 2 asynchronous evaluations
+First pass: initiating 2 local asynchronous jobs
+Initiating evaluation 69
+nonblocking fork: simulator_script params.in results.out
+Initiating evaluation 70
+nonblocking fork: simulator_script params.in results.out
+Waiting on completed jobs
+Evaluation 69 has completed
+Waiting on completed jobs
+Evaluation 70 has completed
+
+Active response data for evaluation 69:
+Active set vector = { 1 1 }
+                      2.7732066504e+02 obj_fn
+                      3.5435405458e+02 nln_ineq_con_1
+
+
+Active response data for evaluation 70:
+Active set vector = { 1 1 }
+                      2.7751313566e+02 obj_fn
+                      3.5470840869e+02 nln_ineq_con_1
+
+>>>>> Total response returned to iterator:
+
+Active set vector = { 2 2 } Deriv vars vector = { 1 2 }
+ [  2.4583772944e+03  4.7720225778e+03 ] obj_fn gradient
+ [  4.8093595977e+03  9.0521496507e+03 ] nln_ineq_con_1 gradient
+
+
+
+---------------------
+Begin Evaluation   71
+---------------------
+Parameters for evaluation 71:
+                      8.0485484593e-02 height_to_update
+                      7.4653329752e-02 dia1_to_update
+
+blocking fork: simulator_script params.in results.out
+
+Active response data for evaluation 71:
+Active set vector = { 1 1 }
+                      2.7630524920e+02 obj_fn
+                      3.5229445785e+02 nln_ineq_con_1
+
+
+
+---------------------
+Begin Evaluation   72
+---------------------
+Parameters for evaluation 72:
+                      7.9797583720e-02 height_to_update
+                      7.5013255606e-02 dia1_to_update
+
+blocking fork: simulator_script params.in results.out
+
+Active response data for evaluation 72:
+Active set vector = { 1 1 }
+                      2.7644038672e+02 obj_fn
+                      3.5265955189e+02 nln_ineq_con_1
+
+
+
+---------------------
+Begin Evaluation   73
+---------------------
+Parameters for evaluation 73:
+                      7.5058199639e-02 height_to_update
+                      7.7493012396e-02 dia1_to_update
+
+blocking fork: simulator_script params.in results.out
+
+Active response data for evaluation 73:
+Active set vector = { 1 1 }
+                      2.7705923892e+02 obj_fn
+                      3.5400802876e+02 nln_ineq_con_1
+
+
+
+------------------------------------------
+Begin Dakota derivative estimation routine
+------------------------------------------
+
+>>>>> map at X performed previously and results retrieved
+
+>>>>> Dakota finite difference gradient evaluation for x[1] + h:
+
+---------------------
+Begin Evaluation   74
+---------------------
+Parameters for evaluation 74:
+                      7.5133257839e-02 height_to_update
+                      7.7493012396e-02 dia1_to_update
+
+(Asynchronous job 74 added to queue)
+
+
+>>>>> Dakota finite difference gradient evaluation for x[2] + h:
+
+---------------------
+Begin Evaluation   75
+---------------------
+Parameters for evaluation 75:
+                      7.5058199639e-02 height_to_update
+                      7.7570505408e-02 dia1_to_update
+
+(Asynchronous job 75 added to queue)
+
+
+
+Blocking synchronize of 2 asynchronous evaluations
+First pass: initiating 2 local asynchronous jobs
+Initiating evaluation 74
+nonblocking fork: simulator_script params.in results.out
+Initiating evaluation 75
+nonblocking fork: simulator_script params.in results.out
+Waiting on completed jobs
+Evaluation 74 has completed
+Waiting on completed jobs
+Evaluation 75 has completed
+
+Active response data for evaluation 74:
+Active set vector = { 1 1 }
+                      2.7724196922e+02 obj_fn
+                      3.5436203679e+02 nln_ineq_con_1
+
+
+Active response data for evaluation 75:
+Active set vector = { 1 1 }
+                      2.7743072142e+02 obj_fn
+                      3.5471639880e+02 nln_ineq_con_1
+
+>>>>> Total response returned to iterator:
+
+Active set vector = { 2 2 } Deriv vars vector = { 1 2 }
+ [  2.4345148016e+03  4.7937547853e+03 ] obj_fn gradient
+ [  4.7164471264e+03  9.1410828034e+03 ] nln_ineq_con_1 gradient
+
+
+
+---------------------
+Begin Evaluation   76
+---------------------
+Parameters for evaluation 76:
+                      8.3477474275e-02 height_to_update
+                      7.3168319566e-02 dia1_to_update
+
+blocking fork: simulator_script params.in results.out
+
+Active response data for evaluation 76:
+Active set vector = { 1 1 }
+                      2.7597974146e+02 obj_fn
+                      3.5099856711e+02 nln_ineq_con_1
+
+
+
+---------------------
+Begin Evaluation   77
+---------------------
+Parameters for evaluation 77:
+                      8.2635546611e-02 height_to_update
+                      7.3600788952e-02 dia1_to_update
+
+blocking fork: simulator_script params.in results.out
+
+Active response data for evaluation 77:
+Active set vector = { 1 1 }
+                      2.7616419955e+02 obj_fn
+                      3.5157802726e+02 nln_ineq_con_1
+
+
+
+---------------------
+Begin Evaluation   78
+---------------------
+Parameters for evaluation 78:
+                      7.5618217047e-02 height_to_update
+                      7.7205350647e-02 dia1_to_update
+
+blocking fork: simulator_script params.in results.out
+
+Active response data for evaluation 78:
+Active set vector = { 1 1 }
+                      2.7704021867e+02 obj_fn
+                      3.5400640044e+02 nln_ineq_con_1
+
+
+
+------------------------------------------
+Begin Dakota derivative estimation routine
+------------------------------------------
+
+>>>>> map at X performed previously and results retrieved
+
+>>>>> Dakota finite difference gradient evaluation for x[1] + h:
+
+---------------------
+Begin Evaluation   79
+---------------------
+Parameters for evaluation 79:
+                      7.5693835264e-02 height_to_update
+                      7.7205350647e-02 dia1_to_update
+
+(Asynchronous job 79 added to queue)
+
+
+>>>>> Dakota finite difference gradient evaluation for x[2] + h:
+
+---------------------
+Begin Evaluation   80
+---------------------
+Parameters for evaluation 80:
+                      7.5618217047e-02 height_to_update
+                      7.7282555997e-02 dia1_to_update
+
+(Asynchronous job 80 added to queue)
+
+
+
+Blocking synchronize of 2 asynchronous evaluations
+First pass: initiating 2 local asynchronous jobs
+Initiating evaluation 79
+nonblocking fork: simulator_script params.in results.out
+Initiating evaluation 80
+nonblocking fork: simulator_script params.in results.out
+Waiting on completed jobs
+Evaluation 79 has completed
+Waiting on completed jobs
+Evaluation 80 has completed
+
+Active response data for evaluation 79:
+Active set vector = { 1 1 }
+                      2.7722362895e+02 obj_fn
+                      3.5436040681e+02 nln_ineq_con_1
+
+
+Active response data for evaluation 80:
+Active set vector = { 1 1 }
+                      2.7741098244e+02 obj_fn
+                      3.5471476724e+02 nln_ineq_con_1
+
+>>>>> Total response returned to iterator:
+
+Active set vector = { 2 0 } Deriv vars vector = { 1 2 }
+ [  2.4254773937e+03  4.8023066652e+03 ] obj_fn gradient
+
+
+
+---------------------
+Begin Evaluation   81
+---------------------
+Parameters for evaluation 81:
+                      7.5614049727e-02 height_to_update
+                      7.7197099591e-02 dia1_to_update
+
+blocking fork: simulator_script params.in results.out
+
+Active response data for evaluation 81:
+Active set vector = { 1 1 }
+                      2.7699049896e+02 obj_fn
+                      3.5391123289e+02 nln_ineq_con_1
+
+
+
+---------------------
+Begin Evaluation   82
+---------------------
+Parameters for evaluation 82:
+                      7.5617936777e-02 height_to_update
+                      7.7204795727e-02 dia1_to_update
+
+blocking fork: simulator_script params.in results.out
+
+Active response data for evaluation 82:
+Active set vector = { 1 1 }
+                      2.7703687467e+02 obj_fn
+                      3.5399999949e+02 nln_ineq_con_1
+
+
+
+---------------------
+Begin Evaluation   83
+---------------------
+Parameters for evaluation 83:
+                      7.5617936799e-02 height_to_update
+                      7.7204795771e-02 dia1_to_update
+
+blocking fork: simulator_script params.in results.out
+
+Active response data for evaluation 83:
+Active set vector = { 1 1 }
+                      2.7703687491e+02 obj_fn
+                      3.5399999995e+02 nln_ineq_con_1
+
+
+
+------------------------------------------
+Begin Dakota derivative estimation routine
+------------------------------------------
+
+>>>>> map at X performed previously and results retrieved
+
+>>>>> Dakota finite difference gradient evaluation for x[1] + h:
+
+---------------------
+Begin Evaluation   84
+---------------------
+Parameters for evaluation 84:
+                      7.5693554713e-02 height_to_update
+                      7.7204795727e-02 dia1_to_update
+
+(Asynchronous job 84 added to queue)
+
+
+>>>>> Dakota finite difference gradient evaluation for x[2] + h:
+
+---------------------
+Begin Evaluation   85
+---------------------
+Parameters for evaluation 85:
+                      7.5617936777e-02 height_to_update
+                      7.7282000522e-02 dia1_to_update
+
+(Asynchronous job 85 added to queue)
+
+
+
+Blocking synchronize of 2 asynchronous evaluations
+First pass: initiating 2 local asynchronous jobs
+Initiating evaluation 84
+nonblocking fork: simulator_script params.in results.out
+Initiating evaluation 85
+nonblocking fork: simulator_script params.in results.out
+Waiting on completed jobs
+Evaluation 84 has completed
+Waiting on completed jobs
+Evaluation 85 has completed
+
+Active response data for evaluation 84:
+Active set vector = { 1 1 }
+                      2.7722028295e+02 obj_fn
+                      3.5435399946e+02 nln_ineq_con_1
+
+
+Active response data for evaluation 85:
+Active set vector = { 1 1 }
+                      2.7740763372e+02 obj_fn
+                      3.5470835344e+02 nln_ineq_con_1
+
+>>>>> Total response returned to iterator:
+
+Active set vector = { 2 2 } Deriv vars vector = { 1 2 }
+ [  2.4254599744e+03  4.8022801111e+03 ] obj_fn gradient
+ [  4.6814285484e+03  9.1749992903e+03 ] nln_ineq_con_1 gradient
+
+
+
+---------------------
+Begin Evaluation   86
+---------------------
+Parameters for evaluation 86:
+                      7.7850782639e-02 height_to_update
+                      7.6071296258e-02 dia1_to_update
+
+blocking fork: simulator_script params.in results.out
+
+Active response data for evaluation 86:
+Active set vector = { 1 1 }
+                      2.7695121610e+02 obj_fn
+                      3.5382987397e+02 nln_ineq_con_1
+
+
+
+---------------------
+Begin Evaluation   87
+---------------------
+Parameters for evaluation 87:
+                      7.7627497999e-02 height_to_update
+                      7.6184646232e-02 dia1_to_update
+
+blocking fork: simulator_script params.in results.out
+
+Active response data for evaluation 87:
+Active set vector = { 1 1 }
+                      2.7696512160e+02 obj_fn
+                      3.5386725769e+02 nln_ineq_con_1
+
+
+
+---------------------
+Begin Evaluation   88
+---------------------
+Parameters for evaluation 88:
+                      7.6172519044e-02 height_to_update
+                      7.6923263214e-02 dia1_to_update
+
+blocking fork: simulator_script params.in results.out
+
+Active response data for evaluation 88:
+Active set vector = { 1 1 }
+                      2.7702667513e+02 obj_fn
+                      3.5400027408e+02 nln_ineq_con_1
+
+
+<<<<< Function evaluation summary: 88 total (87 new, 1 duplicate)
+<<<<< Best parameters          =
+                      7.6172519044e-02 height_to_update
+                      7.6923263214e-02 dia1_to_update
+<<<<< Best objective function  =
+                      2.7702667513e+02
+<<<<< Best constraint values   =
+                      3.5400027408e+02
+<<<<< Best data captured at function evaluation 88
+
+
+<<<<< Iterator conmin_mfd completed.
+<<<<< Environment execution completed.
+DAKOTA execution time in seconds:
+  Total CPU        =   0.114042 [parent =   0.114036, child =      6e-06]
+  Total wall clock =    249.865

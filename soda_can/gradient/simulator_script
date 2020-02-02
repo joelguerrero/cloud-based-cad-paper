@@ -1,0 +1,55 @@
+#!/bin/sh
+# Sample simulator to Dakota system call script
+# See Advanced Simulation Code Interfaces chapter in Users Manual
+
+# $1 is params.in FROM Dakota
+# $2 is results.out returned to Dakota
+
+# --------------
+# PRE-PROCESSING
+# --------------
+# Incorporate the parameters from DAKOTA into the template file
+# Change the default inline delimeter (curly braces), e.g., {keyword_to_update} 
+# to avoid problems when doing the substitution. 
+# This is helpful when dealing with json files.
+
+dprepro --left-delimiter='{[' --right-delimiter=']}' $1 evaluate_featurescript_totalsurface.py.template evaluate_featurescript_totalsurface.py
+dprepro --left-delimiter='{[' --right-delimiter=']}' $1 evaluate_featurescript_volume.py.template evaluate_featurescript_volume.py
+
+dprepro --left-delimiter='{[' --right-delimiter=']}' $1 joe1_export_conf.py.template joe1_export_conf.py
+
+# --------
+# ANALYSIS
+# --------
+
+pwd
+
+cp -r ../support_files/apikey .
+cp ../support_files/creds.json .
+
+#Dummy file to force iterations
+#cp ../support_files/tmp.txt .
+
+cp ../support_files/python/function.py .
+
+python joe1_export_conf.py
+
+python evaluate_featurescript_totalsurface.py
+python evaluate_featurescript_volume.py
+python function.py
+
+
+# ---------------
+# POST-PROCESSING
+# ---------------
+
+
+#touch results.out
+
+#If you use a dummy file
+#mv tmp.txt $2
+
+cp output1.txt $2
+
+
+
