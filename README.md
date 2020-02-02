@@ -2,6 +2,7 @@
 Ancillary material for the paper: **Cloud-based CAD parametrization for design space exploration and design optimization in numerical simulations.**
 
 
+* RGB_market_image => market image and python script to get RGB channels
 
 * SSIM => Sample script and images for image similarity
 
