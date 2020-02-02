@@ -1,5 +1,5 @@
 # cloud-based-cad-paper
-Ancillary material for the paper: C**loud-based CAD parametrization for design space exploration and design optimization in numerical simulations.**
+Ancillary material for the paper: **Cloud-based CAD parametrization for design space exploration and design optimization in numerical simulations.**
 
 
 
