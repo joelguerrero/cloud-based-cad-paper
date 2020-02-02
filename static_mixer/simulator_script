@@ -1,0 +1,75 @@
+#!/bin/sh
+# Sample simulator to Dakota system call script
+# See Advanced Simulation Code Interfaces chapter in Users Manual
+
+# $1 is params.in FROM Dakota
+# $2 is results.out returned to Dakota
+
+# --------------
+# PRE-PROCESSING
+# --------------
+# Incorporate the parameters from DAKOTA into the template, writing ros.in
+# Use the following line if SNL's APREPRO utility is used instead of DPrePro.
+# ../aprepro -c '*' -q --nowarning ros.template ros.in
+
+
+dprepro $1 joe1_export_conf.py.template joe1_export_conf.py
+
+# --------
+# ANALYSIS
+# --------
+
+pwd
+
+cp -r ../support_files/apikey .
+cp -r ../support_files/support .
+cp ../support_files/creds.json .
+
+#Dummy file to force iterations
+cp ../support_files/tmp.txt .
+
+
+python joe1_export_conf.py
+
+
+
+cp -r ../case_base/ .
+mv case_base simulation
+mv support simulation
+cd simulation
+
+#cp ../tmp.txt .
+cp ../test.stl ./output.stl
+
+surfaceAutoPatch output.stl splitted.stl 120
+
+sh patches.sh
+cp output_split.stl constant/triSurface/output.stl
+
+sh run_all.sh
+
+foamToVTK -latestTime -noInternal
+
+#ATTENTION - You need to run pvbatch in headless mode, that is, with mesa support
+pvbatch ./support/trace0.py
+mv *.png support
+
+cd support
+python ssim.py
+cp SSIM_out.txt ../tmp.txt
+cd ..
+cp tmp.txt ../tmp.txt
+
+#Go to parent directory workdir.# to evaluate results.out
+cd ..
+
+
+
+# ---------------
+# POST-PROCESSING
+# ---------------
+
+
+#touch results.out
+
+mv tmp.txt $2

@@ -1,0 +1,75 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  6                                     |
+|   \\  /    A nd           | Web:      www.OpenFOAM.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      meshQualityDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+//- Maximum non-orthogonality allowed. Set to 180 to disable.
+maxNonOrtho 75;
+
+//- Max skewness allowed. Set to <0 to disable.
+maxBoundarySkewness 4;	//original 20
+maxInternalSkewness 4;
+
+//  Set to 180 to disable.
+maxConcave 80;
+
+//  Set to very negative number (e.g. -1E30) to disable.
+// Minimum cell pyramid volume; case dependent
+minVol 1e-13;
+
+//- Minimum quality of the tet formed by the face-centre
+//  and variable base point minimum decomposition triangles and
+//  the cell centre. This has to be a positive number for tracking
+//  to work. Set to very negative number (e.g. -1E30) to
+//  disable.
+//     <0 = inside out tet,
+//      0 = flat tet
+//      1 = regular tet
+
+//  1e-15 (small positive) to enable tracking
+// -1e+30 (large negative) for best layer insertion
+
+//minTetQuality 1e-15;
+minTetQuality -1e30;		//ok surface mesh
+//minTetQuality 0;
+//minTetQuality 1;		//ok surface mesh, does not do inflation layer	
+
+// if >0 : preserve single cells with all points on the surface if the
+// resulting volume after snapping (by approximation) is larger than
+// minVolCollapseRatio times old volume (i.e. not collapsed to flat cell).
+//  If <0 : delete always.
+//minVolCollapseRatio 0.5;
+
+minArea          -1;
+
+minTwist          0.02;
+
+minDeterminant    0.001;
+
+minFaceWeight     0.05;
+
+minVolRatio       0.01;
+
+minTriangleTwist -1;
+
+nSmoothScale   4;
+
+errorReduction 0.75;
+
+relaxed
+{
+    maxNonOrtho   75;
+}
+
+// ************************************************************************* //

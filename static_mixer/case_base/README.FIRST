@@ -1,0 +1,39 @@
+#How to run me:
+
+
+
+foamCleanTutorials
+
+#cp constant/triSurface/c1.stl constant/triSurface/output.stl
+#cp constant/triSurface/c2.stl constant/triSurface/output.stl
+cp constant/triSurface/c3.stl constant/triSurface/output.stl
+
+surfaceFeatureExtract | tee log.surfaceFeatureExtract
+
+blockMesh | tee log.blockMesh
+
+snappyHexMesh -overwrite | tee log.snappyHexMesh
+
+checkMesh | tee log.checkMesh
+
+autoPatch 60 -overwrite | tee log.autoPatch
+
+createPatch -overwrite | tee log.createPatch
+
+snappyHexMesh -dict system/snappyHexMeshDict_bl -overwrite | tee log.snappyHexMesh_bl
+
+rm -rf 0
+cp -r 0_org 0
+
+
+decomposePar
+mpirun -np 2 simpleFoam -parallel | tee log.solver
+
+
+
+#simpleFoam | tee log
+
+
+
+#foamDictionary system/controlDict -entry stopAt -set writeNow
+

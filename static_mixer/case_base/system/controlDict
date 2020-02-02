@@ -1,0 +1,363 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  4.x                                   |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      controlDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+application     simpleFoam;
+
+//startFrom       startTime;
+startFrom       latestTime;
+
+startTime       0;
+
+stopAt          endTime;
+
+endTime         1000;
+
+deltaT          1;
+
+writeInterval   50;
+
+purgeWrite      4;
+
+writeFormat     ascii;
+
+writePrecision  8;
+
+writeCompression off;
+
+timeFormat      general;
+
+timePrecision   6;
+
+runTimeModifiable yes;
+
+// ************************************************************************* //
+
+functions
+{
+
+///////////////////////////////////////////////////////////////////////////
+    inlet1_MassFlow
+    {
+        type            surfaceFieldValue;
+        functionObjectLibs ("libfieldFunctionObjects.so");
+        enabled         true;
+
+        //writeControl     outputTime;
+	writeControl   timeStep;
+	writeInterval  1;
+
+        log             true;
+
+        writeFields     false;
+
+        regionType      patch;
+        name      	inlet1;
+
+	operation       sum;
+        fields
+        (
+            phi
+        );
+    }
+///////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////
+    inlet2_MassFlow
+    {
+        type            surfaceFieldValue;
+        functionObjectLibs ("libfieldFunctionObjects.so");
+        enabled         true;
+
+        //writeControl     outputTime;
+	writeControl   timeStep;
+	writeInterval  1;
+
+        log             true;
+
+        writeFields     false;
+
+        regionType      patch;
+        name      	inlet2;
+
+	operation       sum;
+        fields
+        (
+            phi
+        );
+    }
+///////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////
+    outlet_MassFlow
+    {
+        type            surfaceFieldValue;
+        functionObjectLibs ("libfieldFunctionObjects.so");
+        enabled         true;
+
+        //writeControl     outputTime;
+	writeControl   timeStep;
+	writeInterval  1;
+
+        log             true;
+
+        writeFields     false;
+
+        regionType      patch;
+        name      	outlet;
+
+	operation       sum;
+        fields
+        (
+            phi
+        );
+    }
+///////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////
+    outlet_s1
+    {
+        type            surfaceFieldValue;
+        functionObjectLibs ("libfieldFunctionObjects.so");
+        enabled         false;
+
+        //writeControl     outputTime;
+	writeControl   timeStep;
+	writeInterval  1;
+
+        log             true;
+
+        writeFields     false;
+
+        regionType      patch;
+        name      	outlet;
+
+	operation       average;	//weightedAreaAverage;
+        fields
+        (
+            s1
+        );
+    }
+///////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////
+    inlet1_average
+    {
+        type            surfaceFieldValue;
+        functionObjectLibs ("libfieldFunctionObjects.so");
+        enabled         true;
+
+        //writeControl     outputTime;
+	writeControl   timeStep;
+	writeInterval  1;
+
+        log             true;
+
+        writeFields     false;
+
+        regionType      patch;
+        name      	inlet1;
+
+	operation       average;	//weightedAreaAverage;
+        fields
+        (
+            p
+        );
+    }
+///////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////
+    inlet2_average
+    {
+        type            surfaceFieldValue;
+        functionObjectLibs ("libfieldFunctionObjects.so");
+        enabled         true;
+
+        //writeControl     outputTime;
+	writeControl   timeStep;
+	writeInterval  1;
+
+        log             true;
+
+        writeFields     false;
+
+        regionType      patch;
+        name      	inlet2;
+
+	operation       average;	//weightedAreaAverage;
+        fields
+        (
+            p
+        );
+    }
+///////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////
+    outlet_average
+    {
+        type            surfaceFieldValue;
+        functionObjectLibs ("libfieldFunctionObjects.so");
+        enabled         true;
+
+        //writeControl     outputTime;
+	writeControl   timeStep;
+	writeInterval  1;
+
+        log             true;
+
+        writeFields     false;
+
+        regionType      patch;
+        name      	outlet;
+
+	operation       average;	//weightedAreaAverage;
+        fields
+        (
+            p
+        );
+    }
+///////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////
+
+minmaxdomain
+{
+	type fieldMinMax;
+
+	functionObjectLibs ("libfieldFunctionObjects.so");
+
+	enabled true;
+
+	mode component;
+
+	writeControl timeStep;
+	writeInterval 1;
+
+	log true;
+
+	fields (p U s1 s2 k omega nut);
+}
+
+///////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////
+
+    fieldAverage
+    {
+        type            fieldAverage;
+        functionObjectLibs ("libfieldFunctionObjects.so");
+        enabled         false;
+        writeControl   outputTime;
+
+        //writeControl   timeStep;
+        //writeInterval  100;
+
+        //cleanRestart true;
+
+        //timeStart       20;
+        //timeEnd         200;
+
+        fields
+        (
+            U
+            {
+                mean        on;
+                prime2Mean  on;
+                base        time;
+            }
+
+            p
+            {
+                mean        on;
+                prime2Mean  on;
+                base        time;
+            }
+        );
+    }
+
+///////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////
+
+scalar1
+{
+    type            scalarTransport;
+    functionObjectLibs ("libsolverFunctionObjects.so");
+
+    enabled false;
+
+    writeControl outputTime;
+    //writeControl timeStep;
+    //writeInterval 1;
+
+    log yes;
+
+    nCorr 2;
+
+    //difussion coefficient
+    D 0;
+    //D 0.1;
+
+    //name of field
+    field s1;
+
+    //use the schemes of field, in this case, U
+    //schemesField U;
+
+}
+
+///////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////
+
+scalar2
+{
+    type            scalarTransport;
+    functionObjectLibs ("libsolverFunctionObjects.so");
+
+    enabled false;
+
+    writeControl outputTime;
+    //writeControl timeStep;
+    //writeInterval 1;
+
+    log yes;
+
+    nCorr 2;
+
+    //difussion coefficient
+    D 0.0;
+
+    //name of field
+    field s2;
+
+    //use the schemes of field, in this case, U
+    //schemesField U;
+
+}
+
+///////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////
+    yplus
+    {
+    	type yPlus;
+    	functionObjectLibs ("libutilityFunctionObjects.so");
+    	enabled true;
+        writeControl outputTime;
+    }
+///////////////////////////////////////////////////////////////////////////
+
+};

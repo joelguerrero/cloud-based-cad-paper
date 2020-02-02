@@ -1,0 +1,257 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  6                                     |
+|   \\  /    A nd           | Web:      www.OpenFOAM.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      snappyHexMeshDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+castellatedMesh true;
+snap            true;
+addLayers       true;
+
+geometry
+{
+    output.stl
+    {
+        type triSurfaceMesh;
+        name body; 
+        regions
+        {
+            patch0          		// Named region in the STL file
+            {
+                  name inlet2; 		// User-defined patch name
+            } 
+            patch1          		// Named region in the STL file
+            {
+                  name walls1; 		// User-defined patch name
+            } 
+            patch2          		// Named region in the STL file
+            {
+                  name inlet1; 		// User-defined patch name
+            } 
+            patch3          		// Named region in the STL file
+            {
+                  name outlet; 		// User-defined patch name
+            } 
+            patch4          		// Named region in the STL file
+            {
+                  name walls2; 		// User-defined patch name
+            } 
+        }
+    }
+
+};
+
+
+castellatedMeshControls
+{
+
+    maxLocalCells 100000;
+    maxGlobalCells 20000000;
+    minRefinementCells 10;
+    maxLoadUnbalance 0.10;
+    nCellsBetweenLevels 3;
+
+    features
+    (
+        {
+            file "output.eMesh";
+            level 0;
+        }
+    );
+
+
+    refinementSurfaces
+    {
+
+        body
+        {
+            level (0 0);
+            //level (1 1);
+        }
+
+   
+    }
+
+    resolveFeatureAngle 30;		//default
+
+    planarAngle 30;
+
+    refinementRegions
+    {
+
+        body
+        {
+            mode distance;
+            //levels ((1e-4 0));
+            levels ((1000 1));
+        }
+
+    }
+
+    locationInMesh (0 0 1); 
+
+    allowFreeStandingZoneFaces true;
+}
+
+
+snapControls
+{
+    nSmoothPatch 3;	//default
+    //nSmoothPatch 10;	//improved
+
+    tolerance 2.0;
+    //tolerance 1.0;
+
+    //default
+    nSolveIter 30;
+    nRelaxIter 5;
+
+    //improved
+    //nSolveIter 300;
+    //nRelaxIter 10;
+
+        nFeatureSnapIter 10;
+        //nFeatureSnapIter 20;	//improved
+
+        implicitFeatureSnap false;
+        explicitFeatureSnap true;
+        multiRegionFeatureSnap false;
+}
+
+// Settings for the layer addition.
+addLayersControls
+{
+
+    relativeSizes true;
+
+        expansionRatio 1.2;
+
+        //finalLayerThickness 0.7;
+        firstLayerThickness 0.2;
+        //thickness 0.7;
+
+    minThickness 0.01;
+
+    layers
+    {
+        //"body.*"
+        "walls.*"
+        {
+            nSurfaceLayers 3;
+	}
+    }
+
+    nGrow 0;
+
+
+        //featureAngle 0;		//no inflation
+        //featureAngle 130;		//default
+        //featureAngle 270;
+        featureAngle 360;		
+
+        // Stop layer growth on highly warped cells
+        maxFaceThicknessRatio 0.5;
+
+    // Patch displacement
+
+        // Number of smoothing iterations of surface normals
+        nSmoothSurfaceNormals 1;
+
+        // Smooth layer thickness over surface patches
+        nSmoothThickness 10;
+
+    // Medial axis analysis
+
+        minMedialAxisAngle 90;
+        minMedianAxisAngle 90;
+
+        maxThicknessToMedialRatio 0.3;
+
+        // Number of smoothing iterations of interior mesh movement direction
+        nSmoothNormals 3;
+
+    // Mesh shrinking
+
+        slipFeatureAngle 30;
+
+        nRelaxIter 5;
+
+        // Create buffer region for new layer terminations
+        nBufferCellsNoExtrude 0;
+
+        nLayerIter 50;
+
+        nRelaxedIter 20;
+
+}
+
+// Generic mesh quality settings. At any undoable phase these determine
+// where to undo.
+meshQualityControls
+{
+    // Specify mesh quality constraints in separate dictionary so can
+    // be reused (e.g. checkMesh -meshQuality)
+    #include "meshQualityDict"
+
+    // Optional : some meshing phases allow usage of relaxed rules.
+    // See e.g. addLayersControls::nRelaxedIter.
+    relaxed
+    {
+        // Maximum non-orthogonality allowed. Set to 180 to disable.
+        maxNonOrtho 75;
+    }
+
+    //minFlatness 0.5;
+
+    // Advanced
+
+        // Number of error distribution iterations
+        nSmoothScale 4;
+        // amount to scale back displacement at error points
+        errorReduction 0.75;
+}
+
+// Advanced
+
+//debug 0;
+//debug 3;
+
+//// Debug flags
+/*
+debugFlags
+(
+    mesh            // write intermediate meshes
+    intersections   // write current mesh intersections as .obj files
+    featureSeeds    // write information about explicit feature edge
+                    // refinement
+    attraction      // write attraction as .obj files
+    layerInfo       // write information about layers
+);
+*/
+
+//
+//// Write flags
+/*
+writeFlags
+(
+    scalarLevels    // write volScalarField with cellLevel for postprocessing
+    layerSets       // write cellSets, faceSets of faces in layer
+    layerFields     // write volScalarField for layer coverage
+);
+*/
+
+// Merge tolerance. Is fraction of overall bounding box of initial mesh.
+// Note: the write tolerance needs to be higher than this.
+mergeTolerance 1e-6;
+
+// ************************************************************************* //
