@@ -4,8 +4,11 @@ Ancillary material for the paper: C**loud-based CAD parametrization for design s
 
 
 *SSIM => Sample script and images for image similarity
+
 *parallel_coordinates_dse_case => Interactive parallel coordinates scripts (d3.js)
+
 *soda_can => working worflow of soda can case
+
 *static_mixer => working worflow of static_mixer case (CFD + image similarity)
 
 
