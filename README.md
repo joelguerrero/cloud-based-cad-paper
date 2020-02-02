@@ -14,5 +14,8 @@ Ancillary material for the paper: **Cloud-based CAD parametrization for design s
 
 
 
-To use the onshape scripts you will need to create your credentials.
-To use the image similarity scripts in the static mixer, you need to install paraview in headless mode (pvbatch)
+To use the onshape scripts you will need to create your credentials. You also will need to install the Python API, you can find the installation instructions at this link:
+
+https://github.com/onshape-public/apikey/tree/master/python
+
+To use the image similarity scripts in the static mixer, you need to install paraview in headless mode (for usingg pvbatch).
