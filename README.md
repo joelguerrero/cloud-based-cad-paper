@@ -25,3 +25,7 @@ To use the image similarity scripts in the static mixer, you need to install par
 * Dakota 6.10
 * OpenFOAM V7
 * Python 2.7
+
+
+You can find the paper at this link:
+https://www.mdpi.com/2311-5521/5/1/36
